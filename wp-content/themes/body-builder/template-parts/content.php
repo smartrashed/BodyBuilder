@@ -26,9 +26,7 @@
 
 			if ( 'post' === get_post_type() ) : ?>
 			<ul class="post-meta">
-              <li><?php the_date(); ?></li>
-              <li><span>/</span></li>
-              <li><a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></li>
+              <?php body_builder_posted_on(); ?>
             </u><!-- .entry-meta -->
 			<?php
 			endif; ?>

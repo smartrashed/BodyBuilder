@@ -73,25 +73,21 @@ function body_builder_related_posts( $post_id ) {
 
                 
                     <div class="post-item">
-                        <div class="image">
-                            <?php if( has_post_thumbnail() ) : ?>
-                                <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'body-builder-blog-list-related' ); ?></a>
-                            <?php endif; ?>
-                        </div>
-	                        
-	                            <div class="content">
-	                                <?php the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
-	                                <ul class="post-meta">
-	                                    
-	                                     <li><?php body_builder_posted_on(); ?></li>
-           								 <li><span>/</span></li>
-           								 <li><a href="<?php esc_url(the_permalink()); ?>"><?php the_author(); ?></a></li>
-	                                </ul>
-	                                 <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
-          								<a href="<?php the_permalink(); ?>" class="default-button"><?php echo esc_html__( 'Read More', 'body-builder' ); ?></a>
-	                            </div><!-- /.content -->
-	                       
-               	 		</div>
+                            <div class="image">
+                              <?php
+                              if( has_post_thumbnail() ) :
+                                the_post_thumbnail('body-builder-blog-grid');
+                              endif; ?>
+                            </div><!-- image -->
+                            <div class="content">
+                              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                              <ul class="post-meta">
+                                <?php body_builder_posted_on(); ?>
+                              </ul>
+                              <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
+                              <a href="<?php the_permalink();?>" class="default-button"><?php echo  esc_html__('Read More','body-builder'); ?></a>
+                            </div><!-- content -->
+                        </div><!-- post item -->
             <?php endwhile; ?>
        
         </div><!-- /.ccr-section related-post -->

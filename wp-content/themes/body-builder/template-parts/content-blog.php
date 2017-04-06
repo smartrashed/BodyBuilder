@@ -22,9 +22,7 @@
     <div class="content">
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
       <ul class="post-meta">
-        <li><?php body_builder_posted_on(); ?></li>
-        <li><span>/</span></li>
-        <li><a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></li>
+        <?php body_builder_posted_on(); ?>
       </ul>
       <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
       <a href="<?php the_permalink();?>" class="default-button"><?php echo  esc_html__('Read More','body-builder'); ?></a>
