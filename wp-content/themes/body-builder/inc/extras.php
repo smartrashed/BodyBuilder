@@ -41,7 +41,7 @@ add_action( 'wp_head', 'body_builder_pingback_header' );
 function body_builder_social_share( $post_id ){ ?>
     <ul class="gym-share">
         <?php $pinterest_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' ); ?>
-        <li><span>Share:</span></li>
+        <li><span><?php esc_html_e('Share:','body-builder'); ?></span></li>
         <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink( $post_id ) ); ?>"><i class="fa fa-facebook"></i></a></li>
         <li><a target="_blank" href="https://twitter.com/home?status=<?php the_title() ?> <?php echo urlencode( get_permalink( $post_id ) ); ?>"><i class="fa fa-twitter"></i></a></li>
         <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode( get_permalink( $post_id ) ); ?>&title=<?php the_title(); ?>"><i class="fa fa-linkedin"></i></a></li>
@@ -75,7 +75,7 @@ function body_builder_related_posts( $post_id ) {
                     <div class="post-item">
                         <div class="image">
                             <?php if( has_post_thumbnail() ) : ?>
-                                <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'event-hub-speakers-medium' ); ?></a>
+                                <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'body-builder-blog-list-related' ); ?></a>
                             <?php endif; ?>
                         </div>
 	                        
@@ -88,7 +88,7 @@ function body_builder_related_posts( $post_id ) {
            								 <li><a href="<?php esc_url(the_permalink()); ?>"><?php the_author(); ?></a></li>
 	                                </ul>
 	                                 <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
-          								<a href="<?php the_permalink(); ?>" class="default-button"><?php esc_html__( 'Read More', 'body-builder' ); ?></a>
+          								<a href="<?php the_permalink(); ?>" class="default-button"><?php echo esc_html__( 'Read More', 'body-builder' ); ?></a>
 	                            </div><!-- /.content -->
 	                       
                	 		</div>
