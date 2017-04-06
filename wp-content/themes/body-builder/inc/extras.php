@@ -83,7 +83,7 @@ function body_builder_related_posts( $post_id ) {
 	                                <?php the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 	                                <ul class="post-meta">
 	                                    
-	                                     <li><?php the_date() ?></li>
+	                                     <li><?php body_builder_posted_on(); ?></li>
            								 <li><span>/</span></li>
            								 <li><a href="<?php esc_url(the_permalink()); ?>"><?php the_author(); ?></a></li>
 	                                </ul>
