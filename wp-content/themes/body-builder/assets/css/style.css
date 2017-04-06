@@ -2815,11 +2815,12 @@ input[type="submit"][disabled]:focus {
     color: #a3a8ab;
 }
 .post-meta span{
-    color: #e4e7e9;
+    color: #a3a8ab;
 }
 .post-meta li a, .post-meta li a:hover, .post-meta li a:focus{
-    color: #3c3b37;
+    color: #000000;
     text-decoration: none;
+    padding-top:10px;
 }
 .blog-lists .news-item{
     margin-bottom: 30px;

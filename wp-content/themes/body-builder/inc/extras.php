@@ -109,3 +109,14 @@ function body_builder_move_comment_field_to_bottom( $fields ) {
 }
 
 add_filter( 'comment_form_fields', 'body_builder_move_comment_field_to_bottom' );
+
+
+/**
+* Coment Reply Extra Icon
+**/
+
+
+function comment_reply_link_filter($content){
+    return '<i class="fa fa-reply" aria-hidden="true">' . $content . '</i>';
+}
+add_filter('comment_reply_link', 'comment_reply_link_filter', 99);

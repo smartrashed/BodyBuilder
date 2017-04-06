@@ -48,10 +48,10 @@ class Body_builder_Includes {
 			self::include_all_child_first('/vc-extend');
 			add_action('init', array(__CLASS__, '_menu_action_init'));
                         
-                        if (function_exists('cs_get_option')):
+                     /*   if (function_exists('cs_get_option')):
                             self::include_child_first('/codestar-widget-config.php');
                             add_action('widgets_init', array(__CLASS__, '_action_widgets_init'));
-                        endif;                        
+                        endif; */                       
 		}
 
 		/**
