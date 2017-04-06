@@ -1,0 +1,463 @@
+@media only screen and (max-width: 1680px) {
+	.gallery .gallery-top > div{
+		height: 542px;
+	}
+	.gallery .gallery-top .content{
+		padding: 50px;
+	}
+	.gallery .gallery-top .content h2{
+		font-size: 40px;
+	}
+
+	.gallery .gallery-bottom .gallery-item{
+		height: 360px;
+	}
+	.gallery .gallery-bottom .gallery-item a{
+		line-height: 350px;
+	}
+}
+@media only screen and (max-width: 1520px) {
+	.gallery .gallery-top > div{
+		height: 466px;
+	}
+	.gallery .gallery-top .content{
+		padding: 30px;
+	}
+	.gallery .gallery-top .content h2{
+		font-size: 36px;
+		margin-bottom: 10px;
+	}
+	.gallery .gallery-top .content p{
+		margin-bottom: 10px;
+	}
+
+	.gallery .gallery-bottom .gallery-item{
+		height: 300px;
+	}
+	.gallery .gallery-bottom .gallery-item .overlay{
+		line-height: 300px;
+	}
+}
+
+@media only screen and (max-width: 1366px) {
+	.gallery .gallery-top > div{
+		height: 438px;
+	}
+	.gallery .gallery-top .content{
+		padding: 30px;
+	}
+	.gallery .gallery-bottom .gallery-item{
+		height: 290px;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.gallery .gallery-top > div{
+		height: 414px;
+	}
+	.gallery .gallery-top .content{
+		padding: 20px;
+	}
+	.gallery .gallery-bottom .gallery-item{
+		height: 270px;
+	}
+	.gallery .gallery-bottom .gallery-item .overlay{
+		line-height: 250px;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.gallery .gallery-top > div{
+		width: 100%;
+		height: auto;
+	}
+	.gallery .gallery-top .content{
+		padding: 100px;
+	}
+	.gallery .gallery-top .content h2{
+		font-size: 56px;
+		margin-bottom: 30px;
+	}
+	.gallery .gallery-top .content p{
+		margin-bottom: 30px;
+	}
+
+	.shop-cart table tr td{
+		padding: 20px 10px;
+	}
+	.shop-cart table tr .quantity input{
+		width: 75px;
+		margin: 0px -1px;
+	}
+
+
+}
+@media only screen and (max-width: 991px) and (min-width: 768px){
+	.main-menu .menu-bar{
+		float: left;
+	}
+	.navbar-header{
+		float: none;
+	}
+	.main-menu .navbar-brand{
+		float: none;
+    	display: block;
+	}
+	.navbar-brand>img{
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.banner .banner-content{
+	    -webkit-transform: translateY(-50%);
+	    -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	    -o-transform: translateY(-50%);
+	    transform: translateY(-50%);
+	}
+	.banner-items{
+		position: static;
+		background-color: #171717;
+	}
+	.banner-item{
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+	.gallery .gallery-top .content{
+		padding: 50px;
+	}
+	.gallery .gallery-bottom .gallery-item{
+	    width: 100%;
+	    height: auto;
+	}
+	.gallery .gallery-bottom .gallery-item .overlay{
+		line-height: 400px;
+	}
+
+	.gallery-images .gallery-item{
+		width: 33.33%;
+	}
+
+	.testimonilas {
+	    min-height: 350px;
+	}
+
+	.news .news-item{
+		margin-bottom: 30px;
+	}
+	.pagination{
+		margin-bottom: 80px;
+	}
+	.comment_respond{
+		margin-bottom: 80px;
+	}
+
+	.class-list .class-item .image{
+		float: initial;
+		margin: 0;
+	}
+	.class-list .class-item .content{
+		display: block;
+		text-align: center;
+		padding: 20px;
+	}
+
+	.trainer-profile .image{
+	    margin-right: 0px;
+	    margin-bottom: 50px;
+	}
+	.trainer-profile .details{
+	    margin-left: 0px;
+	}
+	.form-item input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.review-rating input{
+		margin: 0px;
+	}
+	.review-rating{
+		margin-bottom: 30px;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	.main-menu .menu-bar li .dropdown-menu{
+		border-top: 4px solid #fccf3e;
+		border-radius: 4px;
+		display: block;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: .3s;
+	}
+	.main-menu .menu-bar li:hover .dropdown-menu{
+		transform: scaleY(1);
+	}
+	.dropdown-menu > li > ul{
+	    position: absolute;
+	    top: 30px;
+	    left: 100%;
+	    width: 100%;
+	    background-color: #fff;
+	    border-top: 4px solid #fccf3e;
+		border-radius: 4px;
+		transition: .3s;
+		opacity: 0;
+	}
+	.dropdown-menu > li:hover > ul{
+		top: -3px;
+		opacity: 1;
+	}
+
+	.dropdown-menu > li > ul > li > ul{
+	    position: absolute;
+	    top: 30px;
+	    left: 100%;
+	    width: 100%;
+	    background-color: #fff;
+	    border-top: 4px solid #fccf3e;
+		border-radius: 4px;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: .3s;
+	}
+	.dropdown-menu > li > ul > li:hover > ul{
+		top: -3px;
+		opacity: 1;
+	}
+	.dropdown-menu > li > ul > li > ul > li > ul{
+	    position: absolute;
+	    top: 30px;
+	    left: 100%;
+	    width: 100%;
+	    background-color: #fff;
+	    border-top: 4px solid #fccf3e;
+		border-radius: 4px;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: .3s;
+	}
+	.dropdown-menu > li > ul > li > ul > li:hover > ul{
+		top: -3px;
+		opacity: 1;
+	}
+
+
+}
+
+@media only screen and (max-width: 767px) {
+	.main-menu .navbar-brand{
+	    padding: 24px 15px;
+	}
+	.main-menu .navbar-toggle{
+	    padding: 34px 10px;
+	}
+	.main-menu .navbar-toggle .icon-bar{
+	    background-color: #fff;
+	}
+	.main-menu .navbar-collapse{
+		max-height: 250px;
+	}
+	.main-menu .menu-bar{
+		float: none;
+		margin-bottom: 80px;
+	}
+	.main-menu .menu-bar li{
+		display: block;
+		margin: 0;
+	    border-bottom: 1px solid #e7e7e7;
+	}
+	.main-menu .menu-bar > li:last-child{
+		border: none;
+	}
+	.main-menu .menu-bar li a{
+		padding: 15px 0px;
+	}
+	.main-menu .menu-bar li.open ul{
+	    position: static;
+	    float: none;
+	    width: auto;
+	    margin-top: 0;
+	    background-color: transparent;
+	    border: 0;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;
+	    margin-left: 20px;
+	}
+	.main-menu .menu-bar li.open ul li a{
+	    color: #d8d6d5;
+	    padding: 10px 0px;
+	}
+	.main-menu .menu-bar li.open ul li a:hover, .main-menu ul li.open ul li a:focus{
+	    color: #fccf3e;
+	}
+	.banner .banner-content h2, .banner-two .banner-content h2{
+		font-size: 48px;
+	}
+
+	.gallery .gallery-top .content{
+		padding: 30px;
+	}
+	.gallery .gallery-top .content h2{
+		font-size: 36px;
+		margin-bottom: 15px;
+	}
+	.gallery .gallery-top .content p{
+		margin-bottom: 15px;
+	}
+
+	.gallery-images .gallery-item{
+		width: 50%;
+	}
+	.video-gallery .top .gallery-item{
+		width: 100%;
+	}
+	
+	.class-single-item .bottom ul{
+		float: none;
+	}
+	.class-single-item .bottom input{
+		margin-bottom: 15px;
+	}
+	.related-class .class-item .image{
+		float: initial;
+    	margin: 0px;
+	}
+	.related-class .class-item .content{
+		text-align: center;
+	}
+
+	.fun-facts .fun-item{
+		margin-bottom: 50px;
+	}
+
+	.trainers.trainers-two .trainer-item{
+		width: 100%;
+    	margin-bottom: 30px;
+	}
+
+
+	.pricing .pricing-item{
+		margin-bottom: 30px;
+	}
+
+	.testimonial .testimonial-images{
+		width: 100%;
+	    float: none;
+	    margin-right: 0px;
+	    overflow: hidden;
+	    margin-bottom: 30px;
+	}
+	.testimonial .testimonial-images li{
+		width: 25%;
+	}
+	.testimonial .testimonial-items{
+		width: 100%;
+		float: none;
+	}
+	.testimonial .testimonial-item{
+		position: static;
+		transform: none;
+	}
+
+	.comment_respond .comment_input:first-child, .comment_respond .comment_input:nth-child(2){
+	    width: 100%;
+	    float: none;
+	}
+	
+	.post-item .image{
+		float: none;
+	    margin-right: 0px;
+	    margin-bottom: 20px;
+	}
+	.post_comment ul li ul {
+	    margin-left: 60px;
+	}
+	.product-details .number{
+	    float: none;
+	    margin-bottom: 30px;
+	}
+	.product-details .selection > input{
+		margin: 0px;
+	}
+	.product-review .nav-tabs>li, .product-review .nav-tabs>li>a{
+		font-size: 16px;
+	}
+	.product-review .nav-tabs>li span{
+		margin: 0px 5px;
+	}
+	.shop-cart .shipping{
+		margin-bottom: 30px;
+	}
+	.shop-cart .shipping select:nth-child(3), .shop-cart .shipping select:nth-child(4){
+	    width: 100%;
+	    float: none;
+	}
+
+
+}
+@media only screen and (max-width: 680px) {
+	.banner .banner-content h2, .banner-two .banner-content h2{
+		font-size: 42px;
+	}
+	.single-post .content .bottom ul{
+		float: none;
+	    overflow: hidden;
+	    margin-bottom: 20px;
+	}
+
+	.post_comment ul li ul {
+	    margin-left: 50px;
+	}
+
+}
+@media only screen and (max-width: 480px) {
+	.navbar-brand>img {
+	    max-width: 230px;
+	}
+	.banner-items .image{
+		display: block;
+		float: none;
+	}
+	.banner .banner-content h2, .banner-two .banner-content h2{
+		font-size: 26px;
+	}
+	.banner .banner-content p, .banner-two .banner-content p{
+		font-size: 18px;
+	}
+	.gallery .gallery-top .content{
+		padding: 15px;
+	}
+	.gallery .gallery-top .content h2{
+		font-size: 26px;
+		line-height: 26px;
+		margin-bottom: 10px;
+	}
+	.gallery .gallery-top .content p{
+		margin-bottom: 10px;
+	}
+
+	.gallery-images .gallery-item{
+		width: 100%;
+	}
+
+	.trainer-profile .personal{
+		padding: 10px;
+	}
+	
+	.pagination span{
+		display: none;
+	}
+	.pagination ul li{
+		margin-right: 5px;
+	}
+	.pagination ul li:first-child a, .pagination ul li:last-child a {
+	    padding: 4px 10px;
+	}
+	.post_comment ul li ul {
+	    margin-left: 30px;
+	}
+
+}
