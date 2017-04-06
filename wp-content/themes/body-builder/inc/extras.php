@@ -64,41 +64,36 @@ function body_builder_related_posts( $post_id ) {
 
     if( $related_posts->have_posts() ) : ?>
 
-        <div class="ccr-section related-post">
-            <h3 class="ccr-section-title"><?php esc_html_e( 'Related Post', 'body-builder' ); ?></h3>
-            <div class="row">
+        <div class="related-post">
+            <h3><?php esc_html_e( 'Related Post', 'body-builder' ); ?></h3>
+           
 
             <?php 
             while( $related_posts->have_posts() ) : $related_posts->the_post(); ?>
 
-                <div class="col-md-6">
+                
                     <div class="post-item">
-                        <div class="post-thumb">
+                        <div class="image">
                             <?php if( has_post_thumbnail() ) : ?>
                                 <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'event-hub-speakers-medium' ); ?></a>
                             <?php endif; ?>
                         </div>
-                        <div class="content-outer">
-                            <div class="content">
-                                <?php the_title( '<h3 class="title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
-                                <div class="meta-post">
-                                    <span class="date"><i class="fa fa-calendar"></i><?php echo event_hub_posted_on() ?></span>
-                                    
-                                    <?php 
-                                        if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-                                                echo '<span class="border"></span><span class="comment"><i class="fa fa-comment"></i>';
-                                                /* translators: %s: post title */
-                                                comments_popup_link( 'Leave a comment', '1 comment', '% comments');
-                                                echo '</span><span class="border"></span>';
-                                        }
-                                    ?>
-                                </div>
-                            </div><!-- /.content -->
-                        </div><!-- /.content-outer -->
-                    </div><!-- /.post-item -->
-                </div>
+	                        
+	                            <div class="content">
+	                                <?php the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
+	                                <ul class="post-meta">
+	                                    
+	                                     <li><?php the_date() ?></li>
+           								 <li><span>/</span></li>
+           								 <li><a href="<?php esc_url(the_permalink()); ?>"><?php the_author(); ?></a></li>
+	                                </ul>
+	                                 <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
+          								<a href="<?php the_permalink(); ?>" class="default-button"><?php esc_html__( 'Read More', 'body-builder' ); ?></a>
+	                            </div><!-- /.content -->
+	                       
+               	 		</div>
             <?php endwhile; ?>
-            </div>
+       
         </div><!-- /.ccr-section related-post -->
 
     <?php 
