@@ -26,12 +26,12 @@ function body_builder_posted_on() {
 
 	$posted_on = sprintf(
 		esc_html_x( '%s', 'post date', 'body-builder' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<span>'. $time_string .'</span>'
 	);
 
 	$byline = sprintf(
 		esc_html_x( '/ %s', 'post author', 'body-builder' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
 	);
 
 	echo '<li>' . $posted_on . '</li><li> ' . $byline . '</li>'; // WPCS: XSS OK.

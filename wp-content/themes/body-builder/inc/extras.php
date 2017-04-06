@@ -66,8 +66,7 @@ function body_builder_related_posts( $post_id ) {
 
         <div class="related-post">
             <h3><?php esc_html_e( 'Related Post', 'body-builder' ); ?></h3>
-           
-
+        
             <?php 
             while( $related_posts->have_posts() ) : $related_posts->the_post(); ?>
 
@@ -97,3 +96,16 @@ function body_builder_related_posts( $post_id ) {
 
     endif;
 }
+
+
+/**
+ * Moving the comments text field to bottom
+ */
+function body_builder_move_comment_field_to_bottom( $fields ) {
+    $comment_field = $fields[ 'comment' ];
+    unset( $fields[ 'comment' ] );
+    $fields[ 'comment' ] = $comment_field;
+    return $fields;
+}
+
+add_filter( 'comment_form_fields', 'body_builder_move_comment_field_to_bottom' );
