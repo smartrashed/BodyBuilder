@@ -320,7 +320,6 @@ pre {
 pre {
     border: 1px solid #d1d1d1;
     font-size: 16px;
-    font-size: 1rem;
     line-height: 1.3125;
     margin: 0 0 1.75em;
     max-width: 100%;
@@ -462,9 +461,7 @@ td {
 /**
  * 4.0 - Forms
  */
-input {
-    line-height: normal;
-}
+
 button,
 button[disabled]:hover,
 button[disabled]:focus,
@@ -486,7 +483,7 @@ input[type="submit"][disabled]:focus {
     letter-spacing: 0.046875em;
     line-height: 1;
     padding: 0.84375em 0.875em;
-}
+} 
 .section-header{
     font-size: 42px;
     line-height: 1;
@@ -2820,7 +2817,6 @@ input[type="submit"][disabled]:focus {
 .post-meta li a, .post-meta li a:hover, .post-meta li a:focus{
     color: #000000;
     text-decoration: none;
-    padding-top:10px;
 }
 .blog-lists .news-item{
     margin-bottom: 30px;

@@ -28,9 +28,9 @@ if ( post_password_required() ) {
 		<h3>
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( '&ldquo;%2$s&rdquo;', '%1$s  &ldquo;%2$s&rdquo;', get_comments_number(), 'body-builder' ) ),
+					esc_html( _nx( '%2$s', '%1$s  %2$s ', get_comments_number(), 'body-builder' ) ),
 					number_format_i18n( get_comments_number() ),
-					'<h3>' . get_the_title() . '</h3>'
+					'<h3>' . esc_html__('Comment','body-builder' ) . '</h3>'
 				);
 			?>
 		</h3><!-- .comments-title -->

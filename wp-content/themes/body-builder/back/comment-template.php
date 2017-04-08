@@ -57,6 +57,7 @@ function body_builder_comment_template( $comment, $args, $depth ) {
                     		array_merge( $args,
                     			array(
                     				'reply_text' => esc_html__( 'Reply', 'body-builder' ),
+                                    'style'      => 'comment_reply',
                     				'depth' 	 => $depth,
                     				'max_depth'  => $args['max_depth'],
                                     'callback'   => comment_reply_link_filter($content)
@@ -85,7 +86,7 @@ function body_builder_comment_form() {
     $req = get_option( 'comment_author_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
     $fields = array(
-        'name' => '<input id="author" class="comment_input" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="' . esc_attr__( 'Your Name', 'body-builder' ) . '"' . $aria_req . ' />',
+        'name' => '<input id="author" class="author_input" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="' . esc_attr__( 'Your Name', 'body-builder' ) . '"' . $aria_req . ' />',
         'email'  => '<input id="email" class="comment_input" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="' . esc_attr__( 'Your Email', 'body-builder' ) . '"' . $aria_req . ' />',
         'phone'    => '<input id="phone" class="comment_input" name="phone" type="text" value="' . esc_attr( $commenter['comment_author_phone'] ) . '" placeholder="' . esc_attr__( 'Your Phone', 'body-builder' ) . '"/>',
     );
