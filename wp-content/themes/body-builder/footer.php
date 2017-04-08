@@ -82,7 +82,7 @@ Wilmington, United States</p>
       </div><!-- footer top -->
       <div class="footer-bottom">
         <div class="container">
-          <p>&#169; copyright <span>Body Builder</span> 2016. All Right Reserved by <a href="#">Labartisan.</a></p>
+          <p>&#169; copyright <span>Body Builder</span> 2017. All Right Reserved by <a href="#">Labartisan.</a></p>
         </div><!-- container -->
       </div><!-- footer-bottom -->
     </footer>

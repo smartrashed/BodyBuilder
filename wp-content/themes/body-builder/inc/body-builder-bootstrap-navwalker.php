@@ -10,7 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-class Body_Builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
+class Body_builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * @see Walker::start_lvl()
@@ -21,7 +21,7 @@ class Body_Builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu sub-menu menu-sub-content\">\n";
+		$output .= "\n$indent<ul role=\"menu\" class=\"menu-bar dropdown-menu dropdown-submenu\">\n";
 	}
 
 	/**
@@ -46,13 +46,13 @@ class Body_Builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 		 * a 0 if the strings are equal.
 		 */
 		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="divider">';
+			$output .= $indent . '<li role="button" class="divider">';
 		} else if ( strcasecmp( $item->title, 'divider') == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="divider">';
+			$output .= $indent . '<li role="button" class="divider">';
 		} else if ( strcasecmp( $item->attr_title, 'dropdown-header') == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="dropdown-header">' . esc_attr( $item->title );
+			$output .= $indent . '<li role="button" class="dropdown-header">' . esc_attr( $item->title );
 		} else if ( strcasecmp($item->attr_title, 'disabled' ) == 0 ) {
-			$output .= $indent . '<li role="presentation" class="disabled"><a href="#">' . esc_attr( $item->title ) . '</a>';
+			$output .= $indent . '<li role="button" class="disabled"><a href="#">' . esc_attr( $item->title ) . '</a>';
 		} else {
 
 			$class_names = $value = '';
@@ -63,7 +63,7 @@ class Body_Builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 
 			if ( $args->has_children )
-				$class_names .= ' dropdown';
+				$class_names .= 'dropdown-menu';
 
 			if ( in_array( 'current-menu-item', $classes ) )
 				$class_names .= ' active';
