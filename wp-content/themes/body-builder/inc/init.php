@@ -39,7 +39,7 @@ class Body_builder_Includes {
 			
 
 
-			//self::include_child_first('/wp-bootstrap-navwalker.php');
+			self::include_child_first('/body-builder-bootstrap-navwalker.php');
 			//self::include_child_first('/tgm-plugin-activation/tgm-plugin-setup.php');			
 			self::include_all_child_first('/shortcodes');
 			self::include_all_child_first('/tgm-plugin-activation');

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class Name: Event_Hub_Bootstrap_Nav_Walker
+ * Class Name: Body_builder_Bootstrap_Nav_Walker
  * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
  * Description: A custom WordPress nav walker class to implement the Bootstrap 3 navigation style in a custom theme using the WordPress built in menu manager.
  * Version: 2.0.4
@@ -21,7 +21,7 @@ class Body_builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul role=\"menu\" class=\"menu-bar dropdown-menu dropdown-submenu\">\n";
+		$output .= "\n$indent<ul role=\"button\" class=\"dropdown-menu\">\n";
 	}
 
 	/**
@@ -46,7 +46,7 @@ class Body_builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 		 * a 0 if the strings are equal.
 		 */
 		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="button" class="divider">';
+			$output .= $indent . '<li role="button" class="dropdown">';
 		} else if ( strcasecmp( $item->title, 'divider') == 0 && $depth === 1 ) {
 			$output .= $indent . '<li role="button" class="divider">';
 		} else if ( strcasecmp( $item->attr_title, 'dropdown-header') == 0 && $depth === 1 ) {
@@ -63,7 +63,7 @@ class Body_builder_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 
 			if ( $args->has_children )
-				$class_names .= 'dropdown-menu';
+				$class_names .= 'dropdown';
 
 			if ( in_array( 'current-menu-item', $classes ) )
 				$class_names .= ' active';

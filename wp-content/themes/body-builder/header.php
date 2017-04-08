@@ -42,8 +42,8 @@
 							if( has_nav_menu( 'primary-menu' ) ) :
 								wp_nav_menu( array(
 									'menu_class'	=> 'menu-bar',
-									'container'		=> true,
-									'walker'		=> new Body_builder_Bootstrap_Nav_Walker()
+									'container'		=> false,
+									'walker'		=> new BB_Walker_Nav_Menu()
 								) );
 							endif;
 						
