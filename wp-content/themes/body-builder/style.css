@@ -824,12 +824,29 @@ ul, ol {
 /***
 *  Custom Comment Form design
 ***/
-.comment_input:first-child {
-    width: 49%;
+
+.post_comment .comment-respond .comment_input_name {
+	width: 49%;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    color: #a3a8ab;
+    padding: 16px;
+    margin-bottom: 20px;
+    outline: none;
     float: left;
 }
-.comment_input {
+.post_comment .comment-respond .comment_input_email {
 	width: 49%;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    color: #a3a8ab;
+    padding: 16px;
+    margin-bottom: 20px;
+    outline: none;
+    float:right;
+}
+.post_comment .comment-respond .comment_input_phone {
+	width: 100%;
     border: 1px solid #ebebeb;
     border-radius: 3px;
     color: #a3a8ab;

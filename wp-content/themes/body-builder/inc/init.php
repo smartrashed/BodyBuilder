@@ -51,7 +51,8 @@ class Body_builder_Includes {
                      /*   if (function_exists('cs_get_option')):
                             self::include_child_first('/codestar-widget-config.php');
                             add_action('widgets_init', array(__CLASS__, '_action_widgets_init'));
-                        endif; */                       
+                        endif; */      
+                                        
 		}
 
 		/**
