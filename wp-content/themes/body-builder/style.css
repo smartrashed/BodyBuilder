@@ -838,16 +838,17 @@ ul, ol {
     outline: none;
 }
 
-
-.submit {
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #171717;
-    background-color: #fccf3e;
-    padding: 12px 37px;
-    margin-top: 10px;
-    -webkit-transition: .25s;
-    transition: .25s;
+.comment_input_textarea{
+	width: 100%;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    color: #a3a8ab;
+    padding: 16px;
+    margin-bottom: 20px;
     outline: none;
+}
+
+.submit:hover {
+    background-color: #171717;
+    color: #fff;
 }

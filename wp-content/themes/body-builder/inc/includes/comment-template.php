@@ -96,7 +96,7 @@ function body_builder_comment_form() {
         'title_reply_after'     => '</h3>',
         'label_submit'  => __( 'Submit', 'body-builder' ),
         'comment_notes_before'  => '',
-        'comment_field' => '<textarea id="comment" name="comment" cols="45" rows="6" placeholder="' . esc_attr__( 'Your Messages', 'body-builder' ) . '" aria-required="true"></textarea>',
+        'comment_field' => '<textarea id="comment" class="comment_input_textarea" name="comment" cols="45" rows="6" placeholder="' . esc_attr__( 'Your Messages', 'body-builder' ) . '" aria-required="true"></textarea>',
         'comment_notes_after' => '',
     );
     comment_form( $comments_args );
