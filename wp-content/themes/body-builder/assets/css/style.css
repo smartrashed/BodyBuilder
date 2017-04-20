@@ -2819,7 +2819,17 @@ input[type="submit"][disabled]:focus {
     color: #000000;
     text-decoration: none;
 }
-.blog-lists .news-item{
+.blog .news-item{
+    margin-bottom: 30px;
+}
+.blog .news-item .content{
+    background-color: #f6f6f6;
+}
+}
+.blog .news-item p{
+    margin-bottom: 30px;
+
+/* .blog-lists .news-item{
     margin-bottom: 30px;
 }
 .blog-lists .news-item .content{
@@ -2833,7 +2843,7 @@ input[type="submit"][disabled]:focus {
 }
 .blog-large-image .news-item p{
     margin-bottom: 30px;
-}
+} */
 .post-item{
     overflow: hidden;
     margin-bottom: 50px;
@@ -3144,6 +3154,7 @@ input[type="submit"][disabled]:focus {
     background: transparent;
     color: #a3a8ab;
     font-size: 16px;
+    margin-top: 18px;
 }
 .sidebar-item .posts .post_item{
     overflow: hidden;
@@ -3244,20 +3255,22 @@ footer .widget-title{
     color: #fff;
     margin-bottom: 20px;
 }
-footer .footer-about p{
+
+footer .footer-widget p{
     font-size: 16px;
     line-height: 26px;
     color: #a3a8ab;
     margin-bottom: 15px;
 }
-footer .footer-about ul{
+footer .footer-widget ul{
     margin: 0;
 }
-footer .footer-about ul li{
+footer .footer-widget ul li{
     list-style: none;
     overflow: hidden;
+    margin-bottom: 10px;
 }
-footer .footer-about ul li span{
+footer .footer-widget ul li span{
     font-size: 28px;
     line-height: 1;
     color: #fccf3e;
@@ -3265,39 +3278,33 @@ footer .footer-about ul li span{
     float: left;
     margin-right: 15px;
 }
-footer .footer-about ul li p{
+footer .footer-widget ul li p{
     display: table;
 }
-footer .footer-post ul{
-    margin: 0;
-}
-footer .footer-post ul li{
-    list-style: none;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-footer .footer-post .post-image{
+/* Footer Recent Post Section */
+footer .footer-widget .post-image{
     float: left;
     margin-right: 20px;
 }
-footer .footer-post .post-content{
+footer .footer-widget .post-content{
     display: table;
 }
-footer .footer-post .post-content h5 a{
+footer .footer-widget .post-content h5 a{
     font-size: 16px;
     line-height: 26px;
     font-weight: 500;
     color: #a3a8ab;
     text-decoration: none;
 }
-footer .footer-post .post-content h5 a:hover{
+footer .footer-widget .post-content h5 a:hover{
     color: #fccf3e;
 }
-footer .footer-post .post-content span{
+footer .footer-widget .post-content span{
     font-size: 15px;
     line-height: 26px;
     color: #6b6d72;
 }
+/* Footer News Letter */
 footer .footer-newsletter p{
     font-size: 16px;
     line-height: 26px;

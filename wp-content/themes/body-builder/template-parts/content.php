@@ -47,9 +47,11 @@
 			?>
 			<div class="bottom">
               <?php body_builder_entry_footer(); ?> 
+
               <?php body_builder_social_share($post->ID); ?>
         	</div>
 		
 		</div>	<!-- .entry-content -->
-</div><!--end single -->	
+</div><!--end single -->
+	
 <?php body_builder_related_posts( $post->ID ); ?>

@@ -36,10 +36,10 @@ class Body_builder_Includes {
 			self::include_child_first('/extras.php'); 
 			self::include_child_first('/customizer.php'); 
 			self::include_child_first('/jetpack.php'); 
+			self::include_child_first('/widgets.php'); 
 			
-
-
 			self::include_child_first('/body-builder-bootstrap-navwalker.php');
+			self::include_child_first('/unyson-widget-config.php');
 			//self::include_child_first('/tgm-plugin-activation/tgm-plugin-setup.php');			
 			self::include_all_child_first('/shortcodes');
 			self::include_all_child_first('/tgm-plugin-activation');
@@ -48,11 +48,7 @@ class Body_builder_Includes {
 			self::include_all_child_first('/vc-extend');
 			add_action('init', array(__CLASS__, '_menu_action_init'));
                         
-                     /*   if (function_exists('cs_get_option')):
-                            self::include_child_first('/codestar-widget-config.php');
-                            add_action('widgets_init', array(__CLASS__, '_action_widgets_init'));
-                        endif; */      
-                                        
+                            
 		}
 
 		/**

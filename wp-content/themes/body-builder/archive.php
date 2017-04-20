@@ -39,23 +39,13 @@ get_header(); ?>
 									 * If you want to override this in a child theme, then include a file
 									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 									 */
-									get_template_part( 'template-parts/content', 'blog' );
+									get_template_part( 'template-parts/content', 'blog-list' );
 
 								endwhile;
 
-								the_posts_navigation(); ?>
-								<div class="pagination">
-					              <ul>
-					                <li><a href=""><i class="fa fa-angle-double-left" aria-hidden="true"></i> Prev</a></li>
-					                <li><a href="">1</a></li>
-					                <li><a href="">2</a></li>
-					                <li>...</li>
-					                <li><a href="">8</a></li>
-					                <li><a href="">Next <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-					              </ul>
-					              <span>Page 1 of 8</span>
-		            			</div>
-							<?php 
+								body_builder_numeric_pagination(); 
+
+
 							else :
 
 								get_template_part( 'template-parts/content', 'none' );
@@ -65,7 +55,7 @@ get_header(); ?>
 					
 				</div>
 					
-					<?php // get_sidebar(); ?>
+					<?php get_sidebar(); ?>
 			</div>
 		</div><!-- #container -->
 	</section><!-- #section -->

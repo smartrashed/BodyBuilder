@@ -1,4 +1,6 @@
 <?php
+
+$body_logo = fw_get_db_settings_option('logo');
 /**
  * The header for our theme
  *
@@ -33,7 +35,8 @@
 				            </button>
 				            <?php
 							if ( is_front_page() && is_home() ) : ?>
-				            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo" class="img-responsive"></a>
+				            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo $body_logo; ?></a>
+				           <!--  <a class="navbar-brand" href="<?php //echo esc_url( home_url( '/' ) ); ?>"><img src="<?php// echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo" class="img-responsive"></a> -->
 				        	 <?php endif; ?>
 			          </div>
 		          <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,12 +58,8 @@
  <!--Page Header start here -->
     <section class="page-header">
       <div class="container">
-        <h3>Blog Page</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><span>/</span></li>
-          <li class="active">Blog Page</li>
-        </ul>
+       
+        <?php body_builder_breadcrumbs() ?>
       </div><!-- container -->
     </section><!-- page-header -->
     <!--Page Header end here -->

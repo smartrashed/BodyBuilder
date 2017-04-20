@@ -65,7 +65,7 @@ function body_builder_setup() {
         add_image_size( 'body-builder-class-vedio-thumb', 370, 240, true );
         add_image_size( 'body-builder-custom-trainer', 390, 320, true );
         add_image_size( 'body-builder-class-single-fill', 750, 410, true );
-        add_image_size( 'body-builder-all-thumb', 80, 80, true );
+        add_image_size( 'body-builder-all-thumb', 90, 80, true );
 
 
 
@@ -131,16 +131,3 @@ add_action( 'after_setup_theme', 'body_builder_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function body_builder_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'body-builder' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'body-builder' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'body_builder_widgets_init' );
-
