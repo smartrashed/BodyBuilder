@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<section <?php post_class('blog-posts padding-130') ?> >
+	<section <?php post_class('blog padding-130') ?> >
 		<div class="container">
 			<div class="row">
           		<div class="col-md-8 col-sm-12 col-xs-12">
@@ -39,7 +39,7 @@ get_header(); ?>
 									 * If you want to override this in a child theme, then include a file
 									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 									 */
-									get_template_part( 'template-parts/content', 'blog-list' );
+									get_template_part( 'template-parts/content', 'blog-large' );
 
 								endwhile;
 

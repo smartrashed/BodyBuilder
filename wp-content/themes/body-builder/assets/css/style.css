@@ -2803,7 +2803,7 @@ input[type="submit"][disabled]:focus {
     font-size: 16px;
     line-height: 26px;
     color: #55575d;
-    margin: 0px;
+    margin-bottom: 0px;
 }
 .post-meta li{
     list-style: none;
@@ -2828,8 +2828,8 @@ input[type="submit"][disabled]:focus {
 }
 .blog .news-item p{
     margin-bottom: 30px;
-
-/* .blog-lists .news-item{
+}
+.blog-lists .news-item{
     margin-bottom: 30px;
 }
 .blog-lists .news-item .content{
@@ -2843,7 +2843,7 @@ input[type="submit"][disabled]:focus {
 }
 .blog-large-image .news-item p{
     margin-bottom: 30px;
-} */
+} 
 .post-item{
     overflow: hidden;
     margin-bottom: 50px;
