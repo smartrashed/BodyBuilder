@@ -25,7 +25,7 @@ $footer_text = fw_get_db_settings_option('footer_copy_right');
       </div><!-- footer top -->
       <div class="footer-bottom">
         <div class="container">
-          <p><?php echo $footer_text; ?> <a href="#">Labartisan.</a></p>
+          <p><?php echo esc_html__($footer_text); ?> <a href="#">Labartisan.</a></p>
         </div><!-- container -->
       </div><!-- footer-bottom -->
     </footer>
