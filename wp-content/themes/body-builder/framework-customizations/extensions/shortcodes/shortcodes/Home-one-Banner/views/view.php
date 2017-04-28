@@ -38,7 +38,7 @@ $right_side_link  = $atts['right_side_link'];
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="banner-item">
               <div class="image hvr-bob">
-				<?php if(!empty($banner_left_image)) : ?>
+				        <?php if(!empty($banner_left_image)) : ?>
                 <img src="<?php echo esc_url($banner_left_image['url']); ?>" alt="image" class="img-responsive">
               	<?php endif; ?>
               </div>
@@ -50,7 +50,7 @@ $right_side_link  = $atts['right_side_link'];
                 	<?php if(!empty($fullday_office)) : ?>
                   <li><?php echo  wp_kses_post($fullday_office);  ?></li>
                   	<?php endif; ?>
-					<?php if(!empty($half_day_office)) : ?>
+					         <?php if(!empty($half_day_office)) : ?>
                   <li><?php echo  wp_kses_post($half_day_office);  ?></li>
                   <?php endif; ?>
                   <?php if(!empty($close_day_office)) : ?>

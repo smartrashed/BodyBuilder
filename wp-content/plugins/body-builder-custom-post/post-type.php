@@ -247,7 +247,7 @@ if ( !class_exists('Body_Builder_Price_Table_Post_Type') ):
                     'not_found'            => esc_html__('No Pricing Table found',         'body-builder'),
                     'not_found_in_trash'   => esc_html__('No Pricing Table found in trash','body-builder'), 
                     'parent_item_colon'     => '',
-                    'menu_name'            => esc_html__('Pricing Table', 'event-term-custom-post')
+                    'menu_name'            => esc_html__('Pricing Table', 'body-builder')
             );
 
             // options
@@ -301,7 +301,7 @@ if ( !class_exists('Body_Builder_Testimonial_Post_Type') ):
                     'not_found'            => esc_html__('No Testmonial found',    'body-builder'),
                     'not_found_in_trash'   => esc_html__('No Testmonial found in trash','body-builder'), 
                     'parent_item_colon'     => '',
-                    'menu_name'            => esc_html__('Testmonial', 'event-term-custom-post')
+                    'menu_name'            => esc_html__('Testmonial', 'body-builder')
             );
 
             // options
@@ -318,7 +318,7 @@ if ( !class_exists('Body_Builder_Testimonial_Post_Type') ):
                     'hierarchical'          => false,
                     'menu_position'         => self::$menu_position,
                     'menu_icon'             => 'dashicons-format-quote',
-                    'supports'              => array( 'title','editor')
+                    'supports'              => array( 'title','editor','thumbnail')
             );
 
             $args = apply_filters( 'presscore_post_type_' . self::$post_type . '_args', $args );

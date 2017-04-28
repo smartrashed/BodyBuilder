@@ -24,9 +24,9 @@ $fourth_image = $atts['fourth_image'];
 
       <div class="gallery-top">
         <div class="image">
-
+          <?php   if( has_post_thumbnail() ) : ?> 
           <a href="<?php esc_url(the_permalink()); ?>"><?php the_post_thumbnail(); ?></a>
-        
+          <?php endif; ?>
         </div>
         <div class="content">
           <h2><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h2>
