@@ -2,22 +2,6 @@
 if (!defined('FW')) die('Forbidden');
 
 
-
-    /*protected function content( $atts, $content = null ) {
-        extract( shortcode_atts( array(
-            'gallery_image'           => '',
-            'gallery_image_title'     => '',
-            'gallery_image_link'      => '',
-            'third_image'             => '',
-            'third_image_icon'        => '',
-            'fourth_image'            => ''
-        ), $atts ) );
-        
-        ob_start();
-            body_builder_about( $gallery_image, $gallery_image_title, $gallery_image_link, $third_image, $third_image_icon,$fourth_image );
-        return ob_get_clean();
-    }*/
-
 $options = array(
    
     'gallery_image'   => array(

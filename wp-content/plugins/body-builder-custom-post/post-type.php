@@ -34,7 +34,60 @@ if ( !class_exists('Body_Builder_Trainer_Post_Type') ):
                     'not_found'            => esc_html__('No Trainer found',         'body-builder'),
                     'not_found_in_trash'   => esc_html__('No Trainer found in trash','body-builder'), 
                     'parent_item_colon'     => '',
-                    'menu_name'            => esc_html__('Trainer', 'body-builder')
+                    'menu_name'            => esc_html__('Trainers', 'body-builder')
+            );
+
+            // options
+            $args = array(
+                    'labels'                => $labels,
+                    'public'                => true,
+                    'publicly_queryable'    => true,
+                    'show_ui'               => true,
+                    'show_in_menu'          => true, 
+                    'query_var'             => true,
+                    'rewrite'               => array( 'slug' => self::$post_type ),
+                    'capability_type'       => 'post',
+                    'has_archive'           => true, 
+                    'hierarchical'          => false,
+                    'menu_position'         => self::$menu_position,
+                    'menu_icon'             => 'dashicons-universal-access',
+                    'supports'              => array( 'title', 'editor', 'thumbnail' )
+            );
+
+            $args = apply_filters( 'presscore_post_type_' . self::$post_type . '_args', $args );
+
+            register_post_type( self::$post_type, $args );
+            flush_rewrite_rules();
+            /* post type end */		
+        }	
+    }
+
+endif;
+/*******************************************************************/
+// Body Builder Class post type
+/*******************************************************************/
+if ( !class_exists('Body_Builder_Class_Post_Type') ):
+
+    class Body_Builder_Class_Post_Type {
+        public static $post_type = 'body_Class';
+        public static $menu_position = 6; 
+        public static $theme_text_domain = 'body-builder';
+        public static function register() {
+
+            // titles
+            $labels = array(
+                    'name'                 => esc_html__('Classs',                 'body-builder'),
+                    'singular_name'        => esc_html__('Classs',                 'body-builder'),
+                    'add_new'              => esc_html__('Add New',                'body-builder'),
+                    'add_new_item'         => esc_html__('Add New Class',          'body-builder'),
+                    'edit_item'            => esc_html__('Edit Class',             'body-builder'),
+                    'new_item'             => esc_html__('New Class',              'body-builder'),
+                    'view_item'            => esc_html__('View Class',             'body-builder'),
+                    'search_items'         => esc_html__('Search Class',           'body-builder'),
+                    'not_found'            => esc_html__('No Class found',         'body-builder'),
+                    'not_found_in_trash'   => esc_html__('No Class found in trash','body-builder'), 
+                    'parent_item_colon'     => '',
+                    'menu_name'            => esc_html__('Classes', 'body-builder')
             );
 
             // options
@@ -58,21 +111,126 @@ if ( !class_exists('Body_Builder_Trainer_Post_Type') ):
 
             register_post_type( self::$post_type, $args );
             flush_rewrite_rules();
-            /* post type end */		
-        }	
+            /* post type end */     
+        }   
     }
 
 endif;
+/*******************************************************************/
+// Body Builder Videos post type
+/*******************************************************************/
+if ( !class_exists('Body_Builder_Videos_gallery_Post_Type') ):
 
+    class Body_Builder_Videos_gallery_Post_Type {
+        public static $post_type = 'body_Video';
+        public static $menu_position = 5; 
+        public static $theme_text_domain = 'body-builder';
+        public static function register() {
+
+            // titles
+            $labels = array(
+                    'name'                 => esc_html__('Videos',                 'body-builder'),
+                    'singular_name'        => esc_html__('Videos',                 'body-builder'),
+                    'add_new'              => esc_html__('Add New',                'body-builder'),
+                    'add_new_item'         => esc_html__('Add New Video',          'body-builder'),
+                    'edit_item'            => esc_html__('Edit Video',             'body-builder'),
+                    'new_item'             => esc_html__('New Video',              'body-builder'),
+                    'view_item'            => esc_html__('View Video',             'body-builder'),
+                    'search_items'         => esc_html__('Search Video',           'body-builder'),
+                    'not_found'            => esc_html__('No Video found',         'body-builder'),
+                    'not_found_in_trash'   => esc_html__('No Video found in trash','body-builder'), 
+                    'parent_item_colon'     => '',
+                    'menu_name'            => esc_html__('Videos', 'body-builder')
+            );
+
+            // options
+            $args = array(
+                    'labels'                => $labels,
+                    'public'                => true,
+                    'publicly_queryable'    => true,
+                    'show_ui'               => true,
+                    'show_in_menu'          => true, 
+                    'query_var'             => true,
+                    'rewrite'               => array( 'slug' => self::$post_type ),
+                    'capability_type'       => 'post',
+                    'has_archive'           => true, 
+                    'hierarchical'          => false,
+                    'menu_position'         => self::$menu_position,
+                    'menu_icon'             => 'dashicons-format-video',
+                    'supports'              => array( 'title', 'thumbnail' )
+            );
+
+            $args = apply_filters( 'presscore_post_type_' . self::$post_type . '_args', $args );
+
+            register_post_type( self::$post_type, $args );
+            flush_rewrite_rules();
+            /* post type end */     
+        }   
+    }
+
+endif;
+/*******************************************************************/
+// Body Builder Images Gallery post type
+/*******************************************************************/
+if ( !class_exists('Body_Builder_Images_gallery_Post_Type') ):
+
+    class Body_Builder_Images_gallery_Post_Type {
+        public static $post_type = 'body_Images';
+        public static $menu_position = 5; 
+        public static $theme_text_domain = 'body-builder';
+        public static function register() {
+
+            // titles
+            $labels = array(
+                    'name'                 => esc_html__('Images',                 'body-builder'),
+                    'singular_name'        => esc_html__('Images',                 'body-builder'),
+                    'add_new'              => esc_html__('Add New',                'body-builder'),
+                    'add_new_item'         => esc_html__('Add New Image',          'body-builder'),
+                    'edit_item'            => esc_html__('Edit Images',             'body-builder'),
+                    'new_item'             => esc_html__('New Images',              'body-builder'),
+                    'view_item'            => esc_html__('View Images',             'body-builder'),
+                    'search_items'         => esc_html__('Search Images',           'body-builder'),
+                    'not_found'            => esc_html__('No Images found',         'body-builder'),
+                    'not_found_in_trash'   => esc_html__('No Images found in trash','body-builder'), 
+                    'parent_item_colon'     => '',
+                    'menu_name'            => esc_html__('Images', 'body-builder')
+            );
+
+            // options
+            $args = array(
+                    'labels'                => $labels,
+                    'public'                => true,
+                    'publicly_queryable'    => true,
+                    'show_ui'               => true,
+                    'show_in_menu'          => true, 
+                    'query_var'             => true,
+                    'rewrite'               => array( 'slug' => self::$post_type ),
+                    'capability_type'       => 'post',
+                    'has_archive'           => true, 
+                    'hierarchical'          => false,
+                    'menu_position'         => self::$menu_position,
+                    'menu_icon'             => 'dashicons-format-gallery',
+                    'supports'              => array( 'title', 'thumbnail' )
+            );
+
+            $args = apply_filters( 'presscore_post_type_' . self::$post_type . '_args', $args );
+
+            register_post_type( self::$post_type, $args );
+            flush_rewrite_rules();
+            /* post type end */     
+        }   
+    }
+
+endif;
 /*******************************************************************/
 // Priceing Table post type
 /*******************************************************************/
 
-/*if ( !class_exists('Event_Hub_Price_Table_Post_Type') ):
+if ( !class_exists('Body_Builder_Price_Table_Post_Type') ):
 
-    class Event_Hub_Price_Table_Post_Type {
-        public static $post_type = 'eh_price_table';
-        public static $menu_position = 6; 
+    class Body_Builder_Price_Table_Post_Type {
+        public static $post_type = 'price_table';
+        public static $menu_position = 7; 
         public static $theme_text_domain = 'body-builder';
         public static function register() {
 
@@ -114,20 +272,18 @@ endif;
             register_post_type( self::$post_type, $args );
             flush_rewrite_rules();
             /* post type end */     
-      //  }   
-    //}
-/*
-endif;
-*/
+        }   
+    }
 
+endif;
 /*******************************************************************/
 // Testmonial post type
 /*******************************************************************/
 
-/*if ( !class_exists('Event_Hub_testmonial_Post_Type') ):
+if ( !class_exists('Body_Builder_Testimonial_Post_Type') ):
 
-    class Event_Hub_testmonial_Post_Type {
-        public static $post_type = 'eh_testmonial';
+    class Body_Builder_Testimonial_Post_Type {
+        public static $post_type = 'body_testmonial';
         public static $menu_position = 7; 
         public static $theme_text_domain = 'body-builder';
         public static function register() {
@@ -170,10 +326,10 @@ endif;
             register_post_type( self::$post_type, $args );
             flush_rewrite_rules();
             /* post type end */     
-     //   }   
-  //  }
-/*
-endif;*/
+        }   
+   }
+
+endif;
 
 /////////////////////////
 // Register post types //
@@ -182,8 +338,11 @@ endif;*/
 if ( ! function_exists( 'body_builder_register_post_types' ) ) :
     function body_builder_register_post_types() {
         Body_Builder_Trainer_Post_Type::register();
-       // Event_Hub_Price_Table_Post_Type::register();
-       // Event_Hub_testmonial_Post_Type::register();
+        Body_Builder_Class_Post_Type::register();
+        Body_Builder_Videos_gallery_Post_Type::register();
+        Body_Builder_Images_gallery_Post_Type::register();
+        Body_Builder_Price_Table_Post_Type::register();
+       Body_Builder_Testimonial_Post_Type::register();
     }
 endif;
 

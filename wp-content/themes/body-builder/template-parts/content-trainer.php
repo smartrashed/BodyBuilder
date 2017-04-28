@@ -6,12 +6,28 @@
  *
  * @package body-builder
  */
+/*Personal  Info*/
+$trainer_designation  = fw_get_db_post_option(get_the_ID(), 'trainer_designation');
+$trainer_exprience  = fw_get_db_post_option(get_the_ID(), 'trainer_exprience');
+$trainer_mobile  = fw_get_db_post_option(get_the_ID(), 'trainer_mobile');
+$trainer_email  = fw_get_db_post_option(get_the_ID(), 'trainer_email');
 
-$trainer_designation  = fw_set_db_post_option(get_the_ID(), 'id', $attr );
 
-var_dump($trainer_designation['trainer_designation']);
+/*Social Link Info*/
+$trainer_facebook  = fw_get_db_post_option(get_the_ID(), 'trainer_facebook');
+$trainer_twitter  = fw_get_db_post_option(get_the_ID(), 'trainer_twitter');
+$trainer_linkedin  = fw_get_db_post_option(get_the_ID(), 'trainer_linkedin');
+$trainer_behance  = fw_get_db_post_option(get_the_ID(), 'trainer_behance');
+$trainer_dribble  = fw_get_db_post_option(get_the_ID(), 'trainer_dribble');
 
-//$trainer_designation = $atts['trainer_designation'];
+/*Training  Info*/
+$course_title  = fw_get_db_post_option(get_the_ID(), 'course_title');
+$course_description  = fw_get_db_post_option(get_the_ID(), 'course_description');
+$course_duration  = fw_get_db_post_option(get_the_ID(), 'course_duration');
+$course_fee  = fw_get_db_post_option(get_the_ID(), 'course_fee');
+$trainer_Contact  = fw_get_db_post_option(get_the_ID(), 'trainer_Contact');
+
+
 ?>
 		
 	   	<div class="col-md-6 col-sm-12 col-xs-12">
@@ -26,34 +42,56 @@ var_dump($trainer_designation['trainer_designation']);
             <div class="details">
               <h3><?php the_title(); ?></h3>
 				<?php if (! empty ($trainer_designation)): ?>
-             	 <span>1<?php echo esc_html__($trainer_designation); ?></span>
+             	 <span><?php echo esc_html__($trainer_designation); ?></span>
 				<?php  endif; ?>
               <p><?php the_content(); ?></p>
               <ul>
                 <li><p>Experience<span>:</span></p>
                 	<?php if (! empty ($trainer_exprience)): ?>
-                	<p>1<?php echo esc_html__($trainer_exprience); ?></p>
+                	<p><?php echo esc_html__($trainer_exprience); ?></p>
                 	<?php  endif; ?>
                 </li>
-                <li><p>Mobile<span>:</span></p><p>+880 1234 567890</p></li>
-                <li><p>Email<span>:</span></p><p>contact@yourmail.com</p></li>
+                <li><p>Mobile<span>:</span></p>
+					<?php if (! empty ($trainer_mobile)): ?>
+                	<p><?php echo esc_html__($trainer_mobile); ?></p>
+					<?php endif; ?>
+                </li>
+                <li><p>Email<span>:</span></p>
+                	<?php if (! empty ($trainer_email)): ?>
+                	<p><?php echo esc_html__($trainer_email); ?></p>
+					<?php endif; ?>
+                </li>
                 <li>
                   <p>Social<span>:</span></p>
                     <ul>
-                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                      <?php if( ! empty( $trainer_facebook ) ) :
+                        echo '<li><a href="'. esc_url( $trainer_facebook ) .'"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>';
+                        endif; ?>
+                       <?php if( ! empty( $trainer_twitter ) ) :
+                        echo '<li><a href="'. esc_url( $trainer_twitter ) .'"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>';
+                        endif; ?>
+                      <?php if( ! empty( $trainer_linkedin ) ) :
+                        echo '<li><a href="'. esc_url( $trainer_linkedin ) .'"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>';
+                        endif; ?>
+                      <?php if( ! empty( $trainer_behance ) ) :
+                        echo '<li><a href="'. esc_url( $trainer_behance ) .'"><i class="fa fa-behance" aria-hidden="true"></i></a></li>';
+                        endif; ?>
+                  	  <?php if( ! empty( $trainer_dribble ) ) :
+                        echo '<li><a href="'. esc_url( $trainer_dribble ) .'"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>';
+                        endif; ?>
                     </ul>
                 </li>
               </ul>
               <div class="personal">
-                <h4>Personal Training</h4>
-                <p>Proactively incentivize scenarios market positioning items. Plagiarize competitive value through installed base partnership. Monotonectal coordinate optimal schemas rather top-line initiative.</p>
+				<?php if (!empty($course_title)) :?>
+                <h4><?php echo esc_html__($course_title); ?></h4>
+				<?php endif; ?>
+				<?php if (!empty($course_description)) :?>
+                <p><?php echo esc_html__($course_description); ?></p>
+                <?php endif; ?>
                 <ul>
-                  <li><p>Duration<span>:</span></p><p>3 Months</p></li>
-                  <li><p>Course Fee<span>:</span></p><p>$ 99.00</p></li>
+                  <li><p>Duration<span>:</span></p><?php if (!empty($course_duration)) :?><p><?php echo esc_html__($course_duration); ?></p><?php endif; ?></li>
+                  <li><p>Course Fee<span>:</span></p><?php if (!empty($course_fee)) :?><p><?php echo esc_html__($course_fee); ?></p><?php endif; ?></li>
                 </ul>
 
                   <a href="#" class="default-button">Contact Trainer</a>

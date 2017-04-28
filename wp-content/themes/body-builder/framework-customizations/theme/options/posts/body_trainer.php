@@ -1,18 +1,19 @@
 <?php if (!defined( 'FW' )) die('Forbidden');
 
 $options= array(
-        'id' => array(
-        'type' => 'tab',
+        'trainers_personal_info' => array(
+        'type' => 'box',
         'title' => __('Trainer Personal Information', 'body-builder'),
         'options' => array(
-            	'trainer_exprience' => array(
-                    'type' => 'text',
-                    'label' => __('Exprience', 'body-builder')
-                ),
                 'trainer_designation' => array(
                     'type' => 'text',
                     'label' => __('Designation', 'body-builder')
                 ),
+            	'trainer_exprience' => array(
+                    'type' => 'text',
+                    'label' => __('Exprience', 'body-builder')
+                ),
+                
                 'trainer_mobile' => array(
                     'type' => 'text',
                     'label' => __('Mobile', 'body-builder')
@@ -25,7 +26,7 @@ $options= array(
             ),
          ),
         'trainers_social_info' => array(
-        'type' => 'tab',
+        'type' => 'box',
         'title' => __('Trainer Social Information', 'body-builder'),
         'options' => array(
                 'trainer_facebook' => array(
@@ -51,10 +52,20 @@ $options= array(
             ),
         ),
 'trainers_course_info' => array(
-        'type' => 'tab',
+        'type' => 'box',
         'title' => __('Trainer Course Information', 'body-builder'),
         'options' => array(
-            'duration' => array(
+            'course_title' => array(
+                'type' => 'text',
+                'label' => __('Course Title', 'body-builder'),
+                'help' => __('Personal Training', 'body-builder')
+            ),
+            'course_description' => array(
+                'type' => 'wp-editor',
+                'label' => __('Course Description', 'body-builder'),
+                'help' => __('Description Goes here', 'body-builder')
+            ),
+            'course_duration' => array(
                 'type' => 'text',
                 'label' => __('Course Duration', 'body-builder'),
                 'help' => __('Example:6 Months', 'body-builder')

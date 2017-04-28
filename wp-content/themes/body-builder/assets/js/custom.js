@@ -5,7 +5,6 @@
 
 
 
-
 var fixed_top = $(".main-menu");
 
 $(window).on('scroll', function() {
@@ -335,7 +334,7 @@ $(window).on('load', function() {
 	  }
 	];
 
-	var mapOptions = {
+		var mapOptions = {
 	  center: new google.maps.LatLng(23.739296,90.3870653),
 	  zoom: 12,
 	  styles: styleArray,
@@ -357,4 +356,17 @@ $(window).on('load', function() {
 
 });
 
+
+
 })(jQuery);
+
+/*$(document).ready(function() {
+	$('col-md-4 col-sm-6 col-xs-12:first').addClass('col-md-offset-4');
+});*/
+/*$('col-md-4 col-sm-6 col-xs-12:first').ready(function(){
+    $(this).addClass('col-md-offset-4');
+});*/
+
+/*$(document).ready(function(){
+    $('col-md-4 col-sm-6 col-xs-12':first).addClass('col-md-offset-4');
+});*/
