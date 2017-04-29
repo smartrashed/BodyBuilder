@@ -4,8 +4,6 @@ if (!defined('FW')) die('Forbidden');
 
 $section_title = $atts['section_title'];
 
-
-
 ?>
    <!--Gallery start here -->
     <section class="gallery-two">
@@ -18,30 +16,39 @@ $section_title = $atts['section_title'];
               $video_info = new WP_Query(array(
                 'post_type'=>'body_Video',
                 'posts_per_page'=>2
-
                 ));
           ?>
-          <?php while($video_info->have_posts()): $video_info->the_post() ?>
+          
           <div class="gallery-top">
+            <?php while($video_info->have_posts()): $video_info->the_post() ?>
             <div class="gallery-item">
               <div>
                 <?php   if( has_post_thumbnail() ) : ?>
                    <?php the_post_thumbnail('body-builder-vedio-gallery-full'); ?>
                 <?php endif; ?>
                 <div class="overlay"></div>
-                <a href="<?php echo esc_url($videos = fw_get_db_post_option(get_the_ID(), 'videos')); ?>" class="gvideo-icon" data-rel="lightcase"><img src="<?php echo esc_url($video_thumbnail = fw_get_db_post_option(get_the_ID(), 'video_thumbnail["url"]')); ?>" alt="video icon" class="img-reaponsive"></a>
+                <a href="" class="gvideo-icon" data-rel="lightcase"><img src="<?php echo esc_url($video_thumbnail = fw_get_db_post_option(get_the_ID(), 'video_thumbnail')); ?>" alt="video icon" class="img-reaponsive"></a>
               </div>
             </div><!-- gallery-item -->
+            <?php endwhile; ?>
           </div><!-- gallery-top -->
-          <?php endwhile; ?>
+          <?php
+              $image_info = new WP_Query(array(
+                'post_type'=>'body_Images',
+                'posts_per_page'=> 8
+
+                ));
+          ?>
           <div class="gallery-images">
+            <?php while($image_info->have_posts()): $image_info->the_post() ?>
             <div class="gallery-item">
               <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/gallery_07.jpg" alt="gallery image" class="img-responsive">
+                <?php the_post_thumbnail('body-builder-img-gallery'); ?>
                 <div class="overlay"></div><!-- overlay -->
-                <a href="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/gallery_07_bg.jpg" class="image-icon" data-rel="lightcase:myCollection"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/image-icon.png" alt="gallery image" class="img-responsive"></a>
+                <a href="<?php echo esc_url(get_the_post_thumbnail()); ?>" class="image-icon" data-rel="lightcase:myCollection"><img src="<?php echo esc_url($Overlay_image = fw_get_db_post_option(get_the_ID(), 'Overlay_image')); ?>" alt="video icon" class="img-reaponsive"></a>
               </div>
             </div><!-- gallery-item -->
+            <?php endwhile; ?>
           </div><!-- gallery-images -->
 
         </div><!-- container -->
