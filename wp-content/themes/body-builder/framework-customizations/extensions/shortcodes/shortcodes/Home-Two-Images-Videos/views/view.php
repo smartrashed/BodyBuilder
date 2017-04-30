@@ -45,8 +45,9 @@ $section_title = $atts['section_title'];
               <div class="gallery-item">
                 <div>
                   <?php the_post_thumbnail('body-builder-img-gallery'); ?>
+                  <?php $Overlay_image = fw_get_db_post_option(get_the_ID(), 'Overlay_image'); ?>
                   <div class="overlay"></div><!-- overlay -->
-                  <a href="<?php echo esc_url(get_the_post_thumbnail()); ?>" class="image-icon" data-rel="lightcase:myCollection"><img src="<?php echo esc_url($Overlay_image = fw_get_db_post_option(get_the_ID(), 'Overlay_image')); ?>" alt="video icon" class="img-reaponsive"></a>
+                  <a href="<?php echo esc_url(get_the_post_thumbnail()); ?>" class="image-icon" data-rel="lightcase:myCollection"><img src="<?php echo esc_url($Overlay_image['url']); ?>" alt="video icon" class="img-reaponsive"></a>
                 </div>
               </div><!-- gallery-item -->
               <?php endwhile; ?>

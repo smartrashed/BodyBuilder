@@ -1,7 +1,6 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
 $section_title = $atts['section_title'];
 
 ?>
@@ -16,7 +15,6 @@ $section_title = $atts['section_title'];
           $image_info = new WP_Query(array(
             'post_type'=>'body_Images',
             'posts_per_page'=> 8
-
             ));
       ?>
         <div class="gallery-images">
