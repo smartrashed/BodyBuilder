@@ -62,7 +62,7 @@ function body_builder_setup() {
         add_image_size( 'body-builder-vedio-gallery-thumb', 370, 230, true );
         add_image_size( 'body-builder-img-gallery', 290, 200, true );
         add_image_size( 'body-builder-class-grid', 270, 200, true );
-        add_image_size( 'body-builder-class-vedio-thumb', 370, 240, true );
+        add_image_size( 'body-builder-class-vedio-thumb', 370, 230, true );
         add_image_size( 'body-builder-custom-trainer', 390, 320, true );
         add_image_size( 'body-builder-class-single-fill', 750, 410, true );
         add_image_size( 'body-builder-all-thumb', 90, 80, true );

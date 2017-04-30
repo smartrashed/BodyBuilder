@@ -83,10 +83,10 @@ $trainer_Contact  = fw_get_db_post_option(get_the_ID(), 'trainer_Contact');
                 </li>
               </ul>
               <div class="personal">
-				<?php if (!empty($course_title)) :?>
+			         	<?php if (!empty($course_title)) :?>
                 <h4><?php echo esc_html__($course_title); ?></h4>
-				<?php endif; ?>
-				<?php if (!empty($course_description)) :?>
+			         	<?php endif; ?>
+				        <?php if (!empty($course_description)) :?>
                 <p><?php echo esc_html__($course_description); ?></p>
                 <?php endif; ?>
                 <ul>

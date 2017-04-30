@@ -30,7 +30,7 @@ $section_title = $atts['section_title'];
                     <div class="content">
                       <p><?php the_content(); ?></p>
                       <h4><?php the_title(); ?></h4>
-                      <span>Heart Patient</span>
+                      <span><?php echo esc_html__($designation = fw_get_db_post_option(get_the_ID(), 'designation'));  ?></span>
                     </div><!-- content -->
                   </div><!-- testimonial-item -->
                 </div><!-- swiper-slide -->
