@@ -7,7 +7,7 @@
  * @package body-builder
  */
 
-$class_time  = fw_get_db_post_option(get_the_ID(), 'time');
+$class_time  = fw_get_db_post_option(get_the_ID(), 'class_time');
 $class_end_time  = fw_get_db_post_option(get_the_ID(), 'class_end_time');
 $trainer_name  = fw_get_db_post_option(get_the_ID(), 'trainer_name');
 $course_duration  = fw_get_db_post_option(get_the_ID(), 'course_duration');
@@ -38,7 +38,7 @@ $class_dribble  = fw_get_db_post_option(get_the_ID(), 'class_dribble');
     <h2><?php the_title(); ?></h2>
     <ul>
       <?php if(!empty($class_time)) : ?>
-      <li><?php e_('Class Time :','body-builder') ?> <?php echo esc_html__( $class_time, 'body-builder' ); ?></li>
+      <li><?php _e('Class Time :','body-builder') ?> <?php echo esc_html__( $class_time, 'body-builder' ); ?></li>
       <?php endif; ?>
       <li><span>/</span></li>
         <?php if(!empty($trainer_name)) : ?>
@@ -77,4 +77,42 @@ $class_dribble  = fw_get_db_post_option(get_the_ID(), 'class_dribble');
   <h3><?php echo $benifit_title ?></h3>
   <p><?php echo wp_kses_post($class_benifits); ?></p>
 </div><!-- class-benifits -->
-<?php body_builder_related_posts( $post->ID ); ?>
+<?php
+$related_posts = new WP_Query( array(
+        'post_type'         => 'body_Class',
+        'posts_per_page'    => 2,
+        'post__not_in'      => array( $post_id ) ) 
+    );
+
+    if( $related_posts->have_posts() ) : ?>
+
+        <div class="related-class">
+            <h3><?php esc_html_e( 'Related Post', 'body-builder' ); ?></h3>
+        
+            <?php 
+            while( $related_posts->have_posts() ) : $related_posts->the_post(); ?>
+
+                
+                    <div class="class-item">
+                            <div class="image">
+                              <?php
+                              if( has_post_thumbnail() ) :
+                                the_post_thumbnail('body-builder-class-grid');
+                              endif; ?>
+                            </div><!-- image -->
+                            <div class="content">
+                              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                              <?php if(!empty($class_time)):?>
+                              <span><?php echo esc_html__($class_time , 'body-builder'); ?></span>
+                              <?php endif; ?>
+                              <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
+                              
+                            </div><!-- content -->
+                        </div><!-- post item -->
+            <?php endwhile; ?>
+       
+        </div><!-- /.ccr-section related-post -->
+
+    <?php 
+        wp_reset_postdata();
+endif;

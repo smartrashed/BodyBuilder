@@ -98,6 +98,7 @@ function body_builder_related_posts( $post_id ) {
 }
 
 
+
 /**
  * Moving the comments text field to bottom
  */

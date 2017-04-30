@@ -3,14 +3,10 @@ if (!defined('FW')) die('Forbidden');
 
 $section_title = $atts['section_title'];
 
+$trainer_facebook =$atts['trainer_facebook'];
+$trainer_twitter =$atts['trainer_twitter'];
+$trainer_linkedin =$atts['trainer_linkedin'];
 
-
- global $post;
-
-    /*if (!$post || $post->post_type != 'post') {
-        return;
-    }*/
-//$trainer_designation  = fw_get_db_post_option(get_the_ID(), 'trainer_designation');
 
 $trainer_info = new Wp_Query(array(
     'post_type'=>'body_trainer',
@@ -35,11 +31,13 @@ $trainer_info = new Wp_Query(array(
           <?php the_post_thumbnail('body-builder-trainer-thumb'); ?>
              <?php endif; ?>
           <div class="overlay"></div>
+
               <div class="trainer-social">
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="<?php echo esc_url($trainer_twitter); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="<?php esc_url($trainer_facebook); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="<?php esc_url($trainer_linkedin); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
               </div>
+
           </div><!-- trainer image -->
               <div class="trainer-details">
                    <h4><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h4>

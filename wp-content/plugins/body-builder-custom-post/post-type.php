@@ -104,7 +104,7 @@ if ( !class_exists('Body_Builder_Class_Post_Type') ):
                     'hierarchical'          => false,
                     'menu_position'         => self::$menu_position,
                     'menu_icon'             => 'dashicons-groups',
-                    'supports'              => array( 'title', 'editor', 'thumbnail' )
+                    'supports'              => array( 'title', 'editor', 'thumbnail', )
             );
 
             $args = apply_filters( 'presscore_post_type_' . self::$post_type . '_args', $args );
