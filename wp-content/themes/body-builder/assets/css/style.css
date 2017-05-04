@@ -972,9 +972,6 @@ input[type="submit"][disabled]:focus {
 .gallery{
     overflow: hidden;
     padding: 6px;
-    margin-right: -30px;
-    margin-left: -30px;
-    margin-top: -15px;
     margin-bottom: 0px;
 }
 .gallery .gallery-top{
@@ -1489,8 +1486,6 @@ input[type="submit"][disabled]:focus {
     background-size: cover;
     background-position: 50% 50%;
     overflow: hidden;
-    margin-left: -30px;
-    margin-right: -30px;
 }
 .fun-facts .overlay{
     background-color: rgba(23, 23, 23, .88);
