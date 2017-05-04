@@ -63,7 +63,16 @@ $options = array(
                 
             	'right_side_link' => array(
                     'type' => 'text',
-                    'label' => __('Link', 'body-builder')
+                    'label' => __('Title Link', 'body-builder')
+                ),
+                'sub_title' => array(
+                    'type' => 'text',
+                    'label' => __('Sub Title', 'body-builder')
+                ),
+                
+                'sub_title_link' => array(
+                    'type' => 'text',
+                    'label' => __('Sub Title Link', 'body-builder')
                 ),
            
             ),

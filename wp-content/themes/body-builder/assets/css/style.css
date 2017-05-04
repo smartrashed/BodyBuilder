@@ -719,7 +719,6 @@ input[type="submit"][disabled]:focus {
 /*  03  - Banner 
 ----------------------------------------------*/
 .banner{
-    background-image: url(../images/banner/banner_01.jpg);
     background-size: cover;
     background-position: 50% 50%;
     height: 100vh;
@@ -860,7 +859,6 @@ input[type="submit"][disabled]:focus {
     color: #fccf3e;
 }
 .banner-two{
-    background-image: url(../images/banner/banner_02.jpg);
     background-size: cover;
     background-position: 50% 50%;
     height: 100vh;
@@ -905,7 +903,6 @@ input[type="submit"][disabled]:focus {
 /*  04  - Page Header
 ----------------------------------------------*/
 .page-header{
-    background-image: url(../images/backgrounds/page_header_bg.jpg);
     background-size: cover;
     background-position: 50% 50%;
     margin: 0;
@@ -1095,7 +1092,6 @@ input[type="submit"][disabled]:focus {
     transform: scale(1.2);
 }
 .gallery-two{
-    background-image: url(../images/backgrounds/gallery-two-bg.jpg);
     background-size: cover;
     background-position: 50% 50%;
     overflow: hidden;
@@ -1243,7 +1239,6 @@ input[type="submit"][disabled]:focus {
 /*  07  - Classes
 ----------------------------------------------*/
 .classes{
-    background-image: url(../images/backgrounds/classes-bg.jpg);
     background-size: cover;
     background-position: 50% 50%;
     overflow: hidden;
@@ -1482,7 +1477,6 @@ input[type="submit"][disabled]:focus {
 /*  08  - Fun Facts
 ----------------------------------------------*/
 .fun-facts{
-    background-image: url(../images/backgrounds/fun-fact-bg.jpg);
     background-size: cover;
     background-position: 50% 50%;
     overflow: hidden;
@@ -1514,7 +1508,6 @@ input[type="submit"][disabled]:focus {
 /*  09  - Trainers
 ----------------------------------------------*/
 .trainers{
-    background-image: url(../images/backgrounds/trainer-bg.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -1646,7 +1639,7 @@ input[type="submit"][disabled]:focus {
     right: 10px;
 }
 .trainers.trainers-two{
-    background-image: url(../images/backgrounds/trainer-bg_02.jpg);
+    /* background image */
 }
 .trainers.trainers-two .trainer-item{
     width: 33.33%;
@@ -1805,7 +1798,6 @@ input[type="submit"][disabled]:focus {
 /*  10  - Pricing
 ----------------------------------------------*/
 .pricing{
-    background-image: url(../images/backgrounds/pricing-bg.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -1863,7 +1855,6 @@ input[type="submit"][disabled]:focus {
 /*  11  - Testimonial
 ----------------------------------------------*/
 .testimonial{
-    background-image: url(../images/backgrounds/testimonial-bg.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -1948,7 +1939,6 @@ input[type="submit"][disabled]:focus {
     margin: 0;
 }
 .testimonial-two{
-    background-image: url(../images/backgrounds/testimonial-bg.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;

@@ -1,5 +1,5 @@
  <?php
-
+if (!defined('FW')) die('Forbidden');
 
 $title  = $atts['banner_title'];
 $subtitle  = $atts['banner_sub_title'];
@@ -13,9 +13,10 @@ $close_day_office  = $atts['close_day_office'];
 
 /*Banner Right Data Showing */
 $banner_right_image  = $atts['banner_right_image'];
-//var_dump($banner_right_image);
 $right_title  = $atts['right_title'];
 $right_side_link  = $atts['right_side_link'];
+$sub_title = $atts['sub_title'];
+$sub_title_link = $atts['sub_title_link'];
 
 
  ?>
@@ -63,7 +64,7 @@ $right_side_link  = $atts['right_side_link'];
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="banner-item">
               <div class="image hvr-bob">
-                <?php if(!empty($banner_right_image)) : ?>
+                <?php if(!empty($banner_right_image)) :  ?>
                 <img src="<?php echo esc_url($banner_right_image['url']); ?>" alt="image" class="img-responsive">
               	<?php endif; ?>
               </div>
@@ -72,7 +73,7 @@ $right_side_link  = $atts['right_side_link'];
                 <h4><?php echo esc_html__($right_title); ?></h4>
            		 <?php endif; ?>
                 <ul>
-                  <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Get Started</a></li>
+                  <li><a href="<?php esc_url($sub_title_link); ?>"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i><?php echo esc_html__($sub_title, 'body-builder'); ?></a></li>
                 </ul>
               </div>
             </div><!-- banner-item -->

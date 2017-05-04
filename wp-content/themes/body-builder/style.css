@@ -951,3 +951,8 @@ color: #171717;
     margin-left: -30px;
     margin-right: -30px;
 }
+.fw-main-row{
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}

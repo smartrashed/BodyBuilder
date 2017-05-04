@@ -4,7 +4,7 @@
 
 $cfg = array(
     'page_builder' => array(
-        'title'         => __('Home Page One PRicing Table', 'body-builder'),
+        'title'         => __('Home Page One Pricing Table', 'body-builder'),
         'description'   => __('This Shortcode will use Homepage One', 'body-builder'),
         'tab'           => __('Body Builder', 'body-builder'),
         'popup_size'    => 'medium' // can be large, medium or small
