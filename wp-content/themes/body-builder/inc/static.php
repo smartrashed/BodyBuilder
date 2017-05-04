@@ -18,7 +18,7 @@ function body_builder_scripts() {
     wp_enqueue_style('flexslider', BODYBUILDER_ASSETS . '/css/flexslider.css');
     wp_enqueue_style('swiper', BODYBUILDER_ASSETS . '/css/swiper.min.css');
     wp_enqueue_style('lightcase', BODYBUILDER_ASSETS . '/css/lightcase.css.css');
-    wp_enqueue_style('reset-css', BODYBUILDER_ASSETS . '/css/wp-reset.css');
+    //wp_enqueue_style('reset-css', BODYBUILDER_ASSETS . '/css/wp-reset.css');
     wp_enqueue_style('body-builder-style', BODYBUILDER_ASSETS . '/css/style.css');
     wp_enqueue_style('body-builder-responsive', BODYBUILDER_ASSETS . '/css/responsive.css');       
 

@@ -936,3 +936,14 @@ transition: .25s;
 	background-color: #fff;
 color: #171717;
 }
+
+/*
+* Contact Form Message Box
+*/
+.contact-form .contact-input {
+    max-height: 100px;
+}
+
+/*
+*  Row Full with with no padding 
+*/

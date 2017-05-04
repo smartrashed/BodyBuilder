@@ -44,7 +44,7 @@ $fourth_image = $atts['fourth_image'];
         <div class="gallery-item">
           <img src="<?php echo esc_url($third_image['url']); ?>" alt="gallery image" class="img-responsive">
           <div class="video_overlay"></div>
-          <a href="video-gallery.html" class="gvideo-icon"><img src="<?php echo esc_url($third_image_icon); ?>" alt="video icon" class="img-reaponsive"></a>
+          <a href="video-gallery.html" class="gvideo-icon"><img src="<?php echo esc_url($third_image_icon['url']); ?>" alt="video icon" class="img-reaponsive"></a>
         </div><!-- gallery-item -->
         <div class="gallery-item">
           <a href="#" data-rel="lightcase"><img src="<?php echo esc_url($fourth_image['url']); ?>" alt="gallery image" class="img-responsive"></a>

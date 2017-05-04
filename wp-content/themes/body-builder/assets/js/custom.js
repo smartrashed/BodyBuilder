@@ -357,7 +357,7 @@ $(window).on('load', function() {
 });
 
 
-    $('col-md-4:first col-sm-6 col-xs-12').addClass('col-md-offset-4');
+   // $('col-md-4:first col-sm-6 col-xs-12').addClass('col-md-offset-4');
 
 
 })(jQuery);

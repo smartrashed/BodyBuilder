@@ -66,12 +66,29 @@ $options = array(
             ),
          ),
 
-   array(
-    'type'  => 'html',
-    'label' => __('Put Shortcode Here', 'body-builder'),
-    'desc'  => __('Description', 'body-builder'),
-    'help'  => __('Help tip', 'body-builder'),
-    'html'  => '[contact-form-7 id="356" title="Contact Us"]',
-)
+   'contact_form'   => array(
+        'label'   => __('Contact Us', 'body-builder'),
+        'desc'    => __('Contact Us Title', 'body-builder'),
+        'type'    => 'wp-editor'
+    ),
+    'map_info' => array(
+        'type' => 'box',
+        'title' => __('Map Info', 'body-builder'),
+        'options' => array(
+                'latitude' => array(
+                    'type' => 'text',
+                    'label' => __('Put Latitude', 'body-builder')
+                ),
+                'longitude' => array(
+                    'type' => 'text',
+                    'label' => __('Put Longitude', 'body-builder')
+                ),
+                
+                'map_icon' => array(
+                    'type' => 'icon-v2',
+                    'label' => __('Map Icon', 'body-builder')
+                ),          
+            ),
+         ),
 
 );
