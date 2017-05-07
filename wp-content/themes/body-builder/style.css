@@ -969,7 +969,7 @@ color: #171717;
 .woocommerce .quantity .qty {
     width: 7.631em;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 /* 
@@ -1049,4 +1049,10 @@ padding: 50px;
 form h3 {
     font-size: 28px;
     padding-left: 50px;
+}
+.woocommerce-order{
+	padding: 50px;
+}
+.site-main{
+	padding: 50px;
 }
