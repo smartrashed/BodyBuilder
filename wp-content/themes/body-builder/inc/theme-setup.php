@@ -72,6 +72,7 @@ function body_builder_setup() {
         add_image_size( 'body-builder-custom-trainer', 390, 320, true );
         add_image_size( 'body-builder-class-single-fill', 750, 410, true );
         add_image_size( 'body-builder-all-thumb', 90, 80, true );
+        add_image_size( 'body-builder-shop-thumb', 80, 80, true );
         add_image_size( 'body-builder-all-testimonial-thumb', 80, 80, true );
 
 

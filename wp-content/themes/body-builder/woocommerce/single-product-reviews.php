@@ -26,7 +26,7 @@ if ( ! comments_open() ) {
 }
 
 ?>
-<div id="reviews" class="woocommerce-Reviews">
+<div id="reviews" class="tab-pane">
 	<div id="comments">
 		<h2 class="woocommerce-Reviews-title"><?php
 			if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {

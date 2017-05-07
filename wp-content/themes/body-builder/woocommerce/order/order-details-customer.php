@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <section class="woocommerce-customer-details">
 
-	<h2><?php _e( 'Customer details', 'woocommerce' ); ?></h2>
+	<h4><?php _e( 'Customer details', 'woocommerce' ); ?></h4>
 
 	<table class="woocommerce-table woocommerce-table--customer-details shop_table customer_details">
 
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-			<h3 class="woocommerce-column__title"><?php _e( 'Billing address', 'woocommerce' ); ?></h3>
+			<h4 class="woocommerce-column__title"><?php _e( 'Billing address', 'woocommerce' ); ?></h4>
 
 			<address>
 				<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>

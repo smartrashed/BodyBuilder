@@ -971,3 +971,82 @@ color: #171717;
     text-align: center;
     padding: 5px;
 }
+
+/* 
+* Cart Page Cross Font style
+*/
+ td span .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fccf3e;
+    border-radius: 100%;
+    color: #fff;
+    padding: 1px;
+}
+.woocommerce a.remove:hover {
+    color: #fff !important;
+    background: #fff;
+}
+
+.woocommerce-message {
+    border-top-color: #fccf3e;
+}
+.woocommerce-message {
+ 
+    border-top: 3px solid #fccf3e;
+  
+}
+.woocommerce-message::before {
+    content: '\e015';
+    color: #fccf3e;
+}
+button.button.alt, .woocommerce input.button.alt {
+    background-color: #fccf3e;
+    color: #fff;
+}
+.woocommerce input.button.alt:hover {
+    background-color: #000;
+    color: #fccf3e;
+}
+.woocommerce-info {
+    border-top-color: #fccf3e;
+}
+.woocommerce-info::before {
+    color: #fccf3e;
+}
+/*
+*  Billing Form Design 
+*/
+.woocommerce form .form-row .input-text, .woocommerce-page form .form-row .input-text{
+	width: 285px;
+border: 1px solid #e4e7e9;
+border-radius: 3px;
+padding: 7px 15px;
+outline: none;
+background-color: #fafafa;
+color: #959595;
+font-size: 16px;
+line-height: 24px;
+font-weight: 500;
+float: left;
+margin-right: 10px;
+}
+.woocommerce form .form-row.woocommerce-validated .select2-container, .woocommerce form .form-row.woocommerce-validated input.input-text, .woocommerce form .form-row.woocommerce-validated select {
+    border-color: #fccf3e;
+}
+
+.woocommerce .col2-set, .woocommerce-page .col2-set {
+    width: 100%;
+    padding: 50px;
+}
+.woocommerce-checkout-review-order{
+padding: 50px;
+}
+form h3 {
+    font-size: 28px;
+    padding-left: 50px;
+}

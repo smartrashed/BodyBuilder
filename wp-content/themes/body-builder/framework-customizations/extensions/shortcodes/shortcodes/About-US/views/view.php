@@ -14,7 +14,7 @@ $content_description = $atts['content_description'];
     <section class="about">
       <div class="container">
         <?php if(!empty($about_title)): ?>
-        <h2 class="section-header"><?php echo esc_html__($about_title,'body-builder') ?></h2>
+        <h2 class="section-header"><?php echo esc_html($about_title); ?></h2>
         <?php endif; ?>
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -24,7 +24,7 @@ $content_description = $atts['content_description'];
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="about-content">
-              <h4><?php echo esc_html__($content_title,'body-builder'); ?></h4>
+              <h4><?php echo esc_html__($content_title); ?></h4>
              
               <p><?php echo wp_kses_post($content_description); ?></p>
             </div><!-- about-content -->
