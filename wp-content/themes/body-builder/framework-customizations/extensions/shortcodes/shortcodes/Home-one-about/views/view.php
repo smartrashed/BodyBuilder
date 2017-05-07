@@ -5,9 +5,11 @@ if (!defined('FW')) die('Forbidden');
 $gallery_image = $atts['gallery_image'];
 $gallery_image_title = $atts['gallery_image_title'];
 $gallery_image_link = $atts['gallery_image_link'];
-$third_image = $atts['third_image'];
-$third_image_icon = $atts['third_image_icon'];
-$fourth_image = $atts['fourth_image'];
+$video_image = $atts['video_image'];
+$video_popup_icon = $atts['video_popup_icon'];
+$video_popup_link = $atts['video_popup_link'];
+$popup_image = $atts['popup_image'];
+
 
 
 ?>
@@ -37,19 +39,25 @@ $fourth_image = $atts['fourth_image'];
     <?php   wp_reset_postdata(); endwhile;   ?>
 
       <div class="gallery-bottom">
+
         <div class="gallery-item">
           <img src="<?php echo esc_url($gallery_image['url']); ?>" alt="gallery image" class="img-responsive">
           <a href="<?php echo esc_url($gallery_image_link); ?>" class="overlay"><?php echo esc_html__($gallery_image_title); ?></a>
         </div><!-- gallery-item -->
+
+        
+         <div class="gallery-item">
+            <div>
+              <img src="<?php echo esc_url($video_image['url']) ?>" alt="gallery image" class="img-responsive">
+              <a href="<?php echo esc_url($video_popup_link) ?>" class="gvideo-icon" data-rel="lightcase"><img src="<?php echo esc_url($video_popup_icon['url']); ?>" alt="video icon" class="img-reaponsive"></a>
+            </div>
+          </div><!-- gallery-item -->
+
         <div class="gallery-item">
-          <img src="<?php echo esc_url($third_image['url']); ?>" alt="gallery image" class="img-responsive">
-          <div class="video_overlay"></div>
-          <a href="video-gallery.html" class="gvideo-icon"><img src="<?php echo esc_url($third_image_icon['url']); ?>" alt="video icon" class="img-reaponsive"></a>
-        </div><!-- gallery-item -->
-        <div class="gallery-item">
-          <a href="#" data-rel="lightcase"><img src="<?php echo esc_url($fourth_image['url']); ?>" alt="gallery image" class="img-responsive"></a>
+          <a href="<?php echo esc_url($popup_image['url']); ?>" data-rel="lightcase"><img src="<?php echo esc_url($popup_image['url']); ?>" alt="gallery image" class="img-responsive"></a>
         </div><!-- gallery-item -->
       </div><!-- gallery bottom -->
-    </section><!-- gallery -->
+
+</section><!-- gallery -->
     <!--Gallery end here -->
     

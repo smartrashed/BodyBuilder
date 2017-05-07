@@ -31,7 +31,7 @@ $('.counter').counterUp();
 
 
 //lightcase
-$('a[data-rel^=lightcase]').lightcase();
+jQuery('a[data-rel^=lightcase]').lightcase();
 
 
 //trainer slider

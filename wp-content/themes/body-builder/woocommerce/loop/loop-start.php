@@ -16,5 +16,5 @@
  * @version     2.0.0
  */
 ?>
-<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="row">
 
