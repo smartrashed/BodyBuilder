@@ -6,7 +6,7 @@ $partner_logos = $atts['partner_logos'];
 
 ?>
 <!--Client start here -->
-<section class="client">
+<div class="client">
   <div class="container">
     <div class="client-slider swiper-container">
       <div class="swiper-wrapper">
@@ -20,6 +20,6 @@ $partner_logos = $atts['partner_logos'];
       </div>
     </div>
   </div><!-- container -->
-</section><!-- client -->
+</div><!-- client -->
 <!--Client end here -->
     

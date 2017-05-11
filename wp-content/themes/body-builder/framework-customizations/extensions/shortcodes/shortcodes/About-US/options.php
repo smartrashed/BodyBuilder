@@ -4,25 +4,25 @@ if (!defined('FW')) die('Forbidden');
 
 $options = array(
     'about_title'   => array(
-        'label'   => __('About US Title', 'body-builder'),
-        'desc'    => __('About Uu Page Section Title ', 'body-builder'),
+        'label'   => esc_html__('About US Title', 'body-builder'),
+        'desc'    => esc_html__('About Uu Page Section Title ', 'body-builder'),
         'type'    => 'text'
     ),
    
     'about_image'   => array(
-        'label'   => __('Second Image Gallery', 'body-builder'),
-        'desc'    => __('Home Page One About Section Second Image ', 'body-builder'),
+        'label'   => esc_html__('Second Image Gallery', 'body-builder'),
+        'desc'    => esc_html__('Home Page One About Section Second Image ', 'body-builder'),
         'type'    => 'upload'
     ),
     
     'content_title'   => array(
-        'label'   => __('About Us Content Title', 'body-builder'),
-        'desc'    => __('Put Here About Us Content Title ', 'body-builder'),
+        'label'   => esc_html__('About Us Content Title', 'body-builder'),
+        'desc'    => esc_html__('Put Here About Us Content Title ', 'body-builder'),
         'type'    => 'text'
     ),
     'content_description'   => array(
-        'label'   => __('About Us Content Description', 'body-builder'),
-        'desc'    => __('Put Here About Us Content Description ', 'body-builder'),
+        'label'   => esc_html__('About Us Content Description', 'body-builder'),
+        'desc'    => esc_html__('Put Here About Us Content Description ', 'body-builder'),
         'type'    => 'wp-editor'
     )
 

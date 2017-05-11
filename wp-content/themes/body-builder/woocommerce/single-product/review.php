@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
-<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 
-	<div id="comment-<?php comment_ID(); ?>" class="comment_container">
 
+	<div id="comment-<?php comment_ID(); ?>" class="review-item">
+		<div class="image">
 		<?php
 		/**
 		 * The woocommerce_review_before hook
@@ -34,8 +34,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_review_before', $comment );
 		?>
-
-		<div class="comment-text">
+		</div>
+		<div class="content">
 
 			<?php
 			/**

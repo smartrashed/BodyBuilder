@@ -15,7 +15,7 @@ $see_more = $atts['see_more'];
 ?>
 
 <!--Trainers start here -->
-<section class="trainers trainers-two">
+<div class="trainers trainers-two">
 <div class="overlay">
   <div class="container">
     <?php if(!empty($section_title)): ?>
@@ -57,5 +57,5 @@ $see_more = $atts['see_more'];
     </div><!-- trainers-button -->
   </div><!-- container -->
 </div><!-- overlay -->
-</section><!-- trainers -->
+</div><!-- trainers -->
 <!--Trainers end here -->

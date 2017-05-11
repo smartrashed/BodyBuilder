@@ -4,19 +4,19 @@ if (!defined('FW')) die('Forbidden');
 
 $price_info = new Wp_Query(array(
     'post_type'=>'price_table',
-    'posts_per_page' => 2 ,
+    'posts_per_page' => 5 ,
   ));
 
 
 ?>
 
 <!--Pricing start here -->
-<section class="pricing">
+<div class="pricing">
   <div class="overlay">
     <div class="container">
       <div class="row">
         <?php while ($price_info->have_posts()): $price_info->the_post() ?>
-        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12 price_ex_class">
           
           <div class="pricing-item">
            
@@ -39,5 +39,5 @@ $price_info = new Wp_Query(array(
       </div><!-- row -->
     </div><!-- container -->
   </div><!-- overlay -->
-</section><!-- pricing -->
+</div><!-- pricing -->
 <!--Pricing end here -->

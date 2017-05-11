@@ -7,7 +7,7 @@ $overlay_icon = $atts['overlay_icon'];
 
 ?>
 <!--Gallery start here -->
-<section class="image-gellary padding-130">
+<div class="image-gellary padding-130">
     <div class="container">
       <?php if(!empty($section_title)): ?>
       <h2 class="section-header"><?php echo esc_html__( $section_title ); ?></h2>
@@ -27,5 +27,5 @@ $overlay_icon = $atts['overlay_icon'];
         </div><!-- gallery-images -->
 
     </div><!-- container -->
-</section><!--Gallery end here -->
+</div><!--Gallery end here -->
     

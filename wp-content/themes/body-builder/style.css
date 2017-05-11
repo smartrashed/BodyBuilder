@@ -1053,6 +1053,35 @@ form h3 {
 .woocommerce-order{
 	padding: 50px;
 }
-.site-main{
-	padding: 50px;
+.woocommerce div.product .woocommerce-tabs ul.tabs li a{
+	text-transform: uppercase;
+}
+
+.review-item{
+	list-style: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    background-color: #fccf3e;
+}
+.woocommerce #review_form #respond .form-submit input{
+	background-color:#fccf3e;
+}
+.woocommerce .star-rating span::before {
+    color: #fccf3e;
+}
+.woocommerce p.stars a {
+    color: #fccf3e;
+}
+.comment-form-author input, .comment-form-email input {
+	width: 200px;
+padding: 8px 20px;
+font-size: 14px;
+border: 1px solid #ebebeb;
+border-radius: 3px;
+outline: none;
+}
+
+.review-area .review-item .content {
+    display: inherit;
 }

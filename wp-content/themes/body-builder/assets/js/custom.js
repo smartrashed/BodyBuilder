@@ -357,18 +357,9 @@ $(window).on('load', function() {
 });
 
 
-   // $('col-md-4:first col-sm-6 col-xs-12').addClass('col-md-offset-4');
+    
+    
+	jQuery('.price_ex_class:first-child').addClass('col-md-offset-4');
 
 
 })(jQuery);
-
-/*$(document).ready(function() {
-	$('col-md-4 col-sm-6 col-xs-12:first').addClass('col-md-offset-4');
-});*/
-/*$('col-md-4 col-sm-6 col-xs-12:first').ready(function(){
-    $(this).addClass('col-md-offset-4');
-});*/
-
-/*$(document).ready(function(){
-    $('col-md-4 col-sm-6 col-xs-12:first').addClass('col-md-offset-4');
-});*/

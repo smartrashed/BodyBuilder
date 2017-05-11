@@ -1,4 +1,4 @@
-<?php 
+div<?php 
 if (!defined('FW')) die('Forbidden');
 
 
@@ -9,7 +9,7 @@ $gallery_items = $atts['gallery'];
 
 ?>
 <!--Gallery start here -->
-<section class="video-gallery padding-130">
+<div class="video-gallery padding-130">
   <div class="container">
     
       <?php if(!empty($section_title)): ?>
@@ -21,7 +21,7 @@ $gallery_items = $atts['gallery'];
          <?php
          $i = 1;
          foreach ($gallery_items as $gallery) : ?>
-         <div class="<?php echo ( $i > 2 ) ? 'col-sm-4 col-xs-12' : 'col-md-6' ?>">
+         <div class="<?php echo ( $i >= 2 ) ? 'col-sm-4 col-xs-12' : 'col-md-6' ?>">
               <div class="gallery-item">
                 <div>
                 <?php if(!empty($gallery['thumb'])): ?>
@@ -39,7 +39,7 @@ $gallery_items = $atts['gallery'];
       </div><!-- bottom -->
      
   </div><!-- overlay -->
-</section><!-- sectio-->
+</div><!-- sectio-->
 
 
   

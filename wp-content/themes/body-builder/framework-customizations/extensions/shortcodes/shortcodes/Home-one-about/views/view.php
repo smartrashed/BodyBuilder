@@ -14,7 +14,7 @@ $popup_image = $atts['popup_image'];
 
 ?>
   <!--Gallery start here -->
-    <section class="gallery">
+<div class="gallery">
 
       <?php $blog_post = new WP_Query(array(
         'post_type' => 'post',
@@ -58,6 +58,6 @@ $popup_image = $atts['popup_image'];
         </div><!-- gallery-item -->
       </div><!-- gallery bottom -->
 
-</section><!-- gallery -->
+</div><!-- gallery -->
     <!--Gallery end here -->
     

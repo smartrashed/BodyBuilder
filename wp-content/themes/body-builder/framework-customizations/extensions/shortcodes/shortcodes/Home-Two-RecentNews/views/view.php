@@ -11,7 +11,7 @@ $section_title = $atts['section_title'];
 ?>
 
 <!--News start here -->
-<section class="news">
+<div class="news">
   <div class="container">
     <?php if(!empty($section_title)) : ?>
     <h2 class="section-header"><?php echo  esc_html__( $section_title,'body-builder'); ?></h2>
@@ -50,5 +50,5 @@ $section_title = $atts['section_title'];
       </div><!-- row -->
     </div><!-- news items -->
   </div><!-- container -->
-</section><!-- news -->
+</div><!-- news -->
 <!--News end here -->

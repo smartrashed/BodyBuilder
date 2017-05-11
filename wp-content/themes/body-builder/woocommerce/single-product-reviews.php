@@ -27,22 +27,20 @@ if ( ! comments_open() ) {
 
 ?>
 <div id="reviews" class="tab-pane">
-	<div id="comments">
-		<h2 class="woocommerce-Reviews-title"><?php
+	<div id="<comments></comments>" class="review-area">
+		<h4 class="woocommerce-Reviews-title"><?php
 			if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
 				/* translators: 1: reviews count 2: product name */
 				printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
 			} else {
 				_e( 'Reviews', 'woocommerce' );
 			}
-		?></h2>
+		?></h4>
 
 		<?php if ( have_comments() ) : ?>
-
-			<ol class="commentlist">
-				<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
-			</ol>
-
+			<div class="review-item">
+					<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
+			</div>
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 				echo '<nav class="woocommerce-pagination">';
 				paginate_comments_links( apply_filters( 'woocommerce_comment_pagination_args', array(
@@ -79,7 +77,7 @@ if ( ! comments_open() ) {
 							'email'  => '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'woocommerce' ) . ' <span class="required">*</span></label> ' .
 										'<input id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" aria-required="true" required /></p>',
 						),
-						'label_submit'  => __( 'Submit', 'woocommerce' ),
+						'label_submit'  => __( 'Submit Review', 'woocommerce' ),
 						'logged_in_as'  => '',
 						'comment_field' => '',
 					);

@@ -8,7 +8,7 @@ $section_title = $atts['section_title'];
 
 ?>
 <!--Classes start here -->
-<section class="classes">
+<div class="classes">
   <div class="overlay">
     <div class="container">
         <?php if(!empty ($section_title) ) : ?>
@@ -44,6 +44,6 @@ $section_title = $atts['section_title'];
       </div><!-- classe-items -->
     </div><!-- container -->
   </div><!-- overlay -->
-</section><!-- classes -->
+</div><!-- classes -->
 <!--Classes end here -->
     

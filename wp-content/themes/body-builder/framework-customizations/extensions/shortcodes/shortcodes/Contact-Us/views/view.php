@@ -25,7 +25,7 @@ $contact_form = $atts['contact_form'];
 
 ?>
 <!--Contact us start here -->
-<section class="contact-us">
+<div class="contact-us">
   <div class="padding-130">
     <div class="container">
       <div class="contact-info">
@@ -90,5 +90,5 @@ $contact_form = $atts['contact_form'];
   <div class="contact-map" id="map_canvas">
     
   </div><!-- contact-map -->
-</section><!-- contact-details -->
+</div><!-- contact-details -->
     <!--Contact us end here -->

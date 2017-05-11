@@ -9,7 +9,7 @@ $section_title = $atts['section_title'];
 
     
 <!--Class Grid start here -->
-<section class="class-grid">
+<div class="class-grid">
   <div class="container">
      <?php if(!empty ($section_title) ) : ?>
       <h2 class="section-header"><?php echo esc_html__($section_title,'body-builder'); ?></h2>
@@ -40,5 +40,5 @@ $section_title = $atts['section_title'];
 
     </div><!-- row -->
   </div><!-- container -->
-</section><!-- class-grid -->
+</div><!-- class-grid -->
 <!--Class Grid end here -->
