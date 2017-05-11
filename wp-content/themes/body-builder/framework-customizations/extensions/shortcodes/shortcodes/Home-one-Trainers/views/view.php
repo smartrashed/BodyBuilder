@@ -7,23 +7,26 @@ $trainer_facebook =$atts['trainer_facebook'];
 $trainer_twitter =$atts['trainer_twitter'];
 $trainer_linkedin =$atts['trainer_linkedin'];
 
+$extraclass = $atts['extra_body_class'];
 
-$trainer_info = new Wp_Query(array(
-    'post_type'=>'body_trainer',
-    'posts_per_page' => 8 ,
-    
-  ));
 ?>
 
  <!--Trainers start here -->
-<div class="trainers">
+<div class="trainers <?php echo esc_attr($extraclass) ?>">
   <div class="overlay">
     <div class="container">
         <h2 class="section-header"><?php echo  esc_html($section_title); ?></h2>
             <div class="trainer-items">
                   <div class="trainer-slider swiper-container">
                     <div class="swiper-wrapper">
-                     <?php  while ($trainer_info->have_posts()) : $trainer_info->the_post()   ?>
+                     <?php  
+                      $trainer_info = new Wp_Query(array(
+                        'post_type'=>'body_trainer',
+                        'posts_per_page' => 8 ,
+                        
+                      ));
+
+                     while ($trainer_info->have_posts()) : $trainer_info->the_post()   ?>
                     <div class="trainer-item swiper-slide">
                           <div class="trainer-image">
                             <?php   if( has_post_thumbnail() ) : ?>

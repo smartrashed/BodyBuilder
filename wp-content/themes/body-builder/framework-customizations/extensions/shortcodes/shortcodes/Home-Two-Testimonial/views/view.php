@@ -2,11 +2,11 @@
 if (!defined('FW')) die('Forbidden');
 
 $section_title = $atts['section_title'];
-
+$extraclass = $atts['extra_body_class'];
 ?>
 
  <!--Testimonial-two start here -->
-<div class="testimonial-two">
+<div class="testimonial-two <?php echo esc_attr($extraclass) ?>">
   <div class="overlay">
     <div class="container">
         <?php if(!empty($section_title)) : ?>
@@ -20,8 +20,8 @@ $section_title = $atts['section_title'];
                 'post_type'=>'body_testmonial',
                 'posts_per_page' => 4 ,
                 
-              )); ?>
-            <?php while ($testimonial_info->have_posts()): $testimonial_info->the_post() ?>
+              )); 
+              while ($testimonial_info->have_posts()): $testimonial_info->the_post() ?>
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="image">

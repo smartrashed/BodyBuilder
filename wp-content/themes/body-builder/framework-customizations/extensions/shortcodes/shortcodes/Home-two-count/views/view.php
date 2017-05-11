@@ -10,12 +10,12 @@ $title3 = $atts['title3'];
 $count3 = $atts['count3'];
 $title4 = $atts['title4'];
 $count4 = $atts['count4'];
-
+$extraclass = $atts['extra_body_class'];
 
 ?>
 <!--Gallery start here -->
  <!--Fun facts start here -->
-<div class="fun-facts">
+<div class="fun-facts <?php echo esc_attr($extraclass) ?>">
   <div class="overlay">
     <div class="container">
       <div class="row">

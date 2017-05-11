@@ -3,10 +3,10 @@ if (!defined('FW')) die('Forbidden');
 
 
 $section_title = $atts['section_title'];
-
+$extraclass = $atts['extra_body_class'];
 ?>
    <!--Gallery start here -->
-<div class="gallery-two">
+<div class="gallery-two <?php echo esc_attr($extraclass) ?>">
   <div class="overlay">
     <div class="container">
       <?php if(!empty($section_title)): ?>

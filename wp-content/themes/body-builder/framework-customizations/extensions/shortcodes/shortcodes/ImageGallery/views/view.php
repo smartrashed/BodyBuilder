@@ -4,10 +4,10 @@ if (!defined('FW')) die('Forbidden');
 $section_title = $atts['section_title'];
 $image_galleries = $atts['image_gallery'];
 $overlay_icon = $atts['overlay_icon'];
-
+$extraclass = $atts['extra_body_class'];
 ?>
 <!--Gallery start here -->
-<div class="image-gellary padding-130">
+<div class="image-gellary padding-130 <?php echo esc_attr($extraclass) ?>">
     <div class="container">
       <?php if(!empty($section_title)): ?>
       <h2 class="section-header"><?php echo esc_html__( $section_title ); ?></h2>

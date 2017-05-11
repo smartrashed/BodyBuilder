@@ -3,10 +3,9 @@ if (!defined('FW')) die('Forbidden');
 
 
 $options = array(
-    'bg_image'   => array(
-        'label'   => esc_html__('Background Images', 'body-builder'),
-        'desc'    => esc_html__('Home Page One Count Down Title', 'body-builder'),
-        'type'    => 'upload'
+    'extra_body_class'   => array(
+        'label'   => esc_html__('Extra Class', 'body-builder'),
+        'type'    => 'text',
+        'desc' => esc_html__('This options is for developer to put custom class', 'body-builder'),
     ),
-    
 );

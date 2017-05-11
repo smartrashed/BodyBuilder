@@ -21,11 +21,11 @@ $email_icon = $atts['email_icon'];
 
 
 $contact_form = $atts['contact_form'];
-
+$extraclass = $atts['extra_body_class'];
 
 ?>
 <!--Contact us start here -->
-<div class="contact-us">
+<div class="contact-us <?php echo esc_attr($extraclass) ?>">
   <div class="padding-130">
     <div class="container">
       <div class="contact-info">

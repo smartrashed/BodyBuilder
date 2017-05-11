@@ -2,7 +2,6 @@
 if (!defined('FW')) die('Forbidden');
 
 
-$bd_image = $atts['bg_image'];
 $section_title = $atts['section_title'];
 
 $trainer_facebook =$atts['trainer_facebook'];
@@ -11,11 +10,13 @@ $trainer_linkedin =$atts['trainer_linkedin'];
 
 $see_more = $atts['see_more'];
 
+$extraclass = $atts['extra_body_class'];
+
 
 ?>
 
 <!--Trainers start here -->
-<div class="trainers trainers-two">
+<div class="trainers trainers-two <?php echo esc_attr($extraclass) ?>">
 <div class="overlay">
   <div class="container">
     <?php if(!empty($section_title)): ?>
@@ -28,8 +29,8 @@ $see_more = $atts['see_more'];
          'post_type'=>'body_trainer',
          'posts_per_page' => 3 ,
       
-        )); ?>
-      <?php while($trainer_info->have_posts()): $trainer_info->the_post(); ?>
+        )); 
+         while($trainer_info->have_posts()): $trainer_info->the_post(); ?>
       <div class="trainer-item">
         <div class="trainer-image">
             <?php if(has_post_thumbnail()): ?>

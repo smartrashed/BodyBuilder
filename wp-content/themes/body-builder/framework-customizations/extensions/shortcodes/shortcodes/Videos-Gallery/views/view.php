@@ -4,12 +4,12 @@ if (!defined('FW')) die('Forbidden');
 
 $section_title = $atts['section_title'];
 $gallery_items = $atts['gallery'];
-
+$extraclass = $atts['extra_body_class'];
 
 
 ?>
 <!--Gallery start here -->
-<div class="video-gallery padding-130">
+<div class="video-gallery padding-130 <?php echo esc_attr($extraclass); ?>">
   <div class="container">
     
       <?php if(!empty($section_title)): ?>

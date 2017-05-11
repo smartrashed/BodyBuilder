@@ -2,21 +2,23 @@
 if (!defined('FW')) die('Forbidden');
 
 
-$testimonial_info = new Wp_Query(array(
-    'post_type'=>'body_testmonial',
-    'posts_per_page' => 4 ,
-    
-  ));
+
+$extraclass = $atts['extra_body_class'];
 ?>
 
 <!--Testimonial start here -->
-<div class="testimonial">
+<div class="testimonial <?php echo esc_attr($extraclass) ?>">
   <div class="overlay">
     <div class="container">
       <div class="testimonilas">
          
         <ul class="testimonial-images" role="tablist">
           <?php 
+               $testimonial_info = new Wp_Query(array(
+              'post_type'=>'body_testmonial',
+              'posts_per_page' => 4 ,
+              
+            ));
             $i = 1;
             while ($testimonial_info->have_posts()) : $testimonial_info->the_post() ?>
               <li role="presentation"<?php echo ( $i == 1 ) ? esc_attr( ' class=active' ) : ''; ?>><a href="#review-0<?php echo esc_attr($i); ?>" aria-controls="review-01" role="tab" data-toggle="tab"><?php the_post_thumbnail(); ?><span></span></a></li>

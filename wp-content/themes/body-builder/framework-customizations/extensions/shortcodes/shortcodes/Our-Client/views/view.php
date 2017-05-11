@@ -3,10 +3,11 @@ if (!defined('FW')) die('Forbidden');
 
 
 $partner_logos = $atts['partner_logos'];
+$extraclass = $atts['extra_body_class'];
 
 ?>
 <!--Client start here -->
-<div class="client">
+<div class="client <?php echo esc_attr($extraclass); ?>">
   <div class="container">
     <div class="client-slider swiper-container">
       <div class="swiper-wrapper">

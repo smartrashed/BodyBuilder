@@ -6,12 +6,12 @@ $about_title = $atts['about_title'];
 $about_image = $atts['about_image'];
 $content_title = $atts['content_title'];
 $content_description = $atts['content_description'];
-
+$extraclass = $atts['extra_body_class'];
 
 
 ?>
 <!--About start here -->
-<div class="about">
+<div class="about <?php echo esc_attr($extraclass) ?>">
   <div class="container">
     <?php if(!empty($about_title)): ?>
     <h2 class="section-header"><?php echo esc_html($about_title); ?></h2>

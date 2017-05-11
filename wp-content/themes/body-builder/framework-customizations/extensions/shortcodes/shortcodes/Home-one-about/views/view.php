@@ -9,12 +9,12 @@ $video_image = $atts['video_image'];
 $video_popup_icon = $atts['video_popup_icon'];
 $video_popup_link = $atts['video_popup_link'];
 $popup_image = $atts['popup_image'];
-
+$extraclass = $atts['extra_body_class'];
 
 
 ?>
   <!--Gallery start here -->
-<div class="gallery">
+<div class="gallery <?php echo esc_attr($extraclass) ?>">
 
       <?php $blog_post = new WP_Query(array(
         'post_type' => 'post',

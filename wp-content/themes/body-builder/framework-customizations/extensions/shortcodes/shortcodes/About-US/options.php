@@ -11,7 +11,7 @@ $options = array(
    
     'about_image'   => array(
         'label'   => esc_html__('Second Image Gallery', 'body-builder'),
-        'desc'    => esc_html__('Home Page One About Section Second Image ', 'body-builder'),
+        'desc'    => esc_html__('About Section Second Image ', 'body-builder'),
         'type'    => 'upload'
     ),
     
@@ -24,6 +24,11 @@ $options = array(
         'label'   => esc_html__('About Us Content Description', 'body-builder'),
         'desc'    => esc_html__('Put Here About Us Content Description ', 'body-builder'),
         'type'    => 'wp-editor'
-    )
+    ),
+    'extra_body_class'   => array(
+        'label'   => esc_html__('Extra Class', 'body-builder'),
+        'type'    => 'text',
+        'desc' => esc_html__('This options is for developer to put custom class', 'body-builder'),
+    ),
 
 );

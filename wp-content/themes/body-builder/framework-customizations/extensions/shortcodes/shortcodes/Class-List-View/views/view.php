@@ -3,12 +3,12 @@ if (!defined('FW')) die('Forbidden');
 
 
 $section_title = $atts['section_title'];
-
+$extraclass = $atts['extra_body_class'];
 
 ?>
 
 <!--Class Grid start here -->
-<div class="class-list">
+<div class="class-list <?php echo esc_attr($extraclass) ?>">
   <div class="container">
     <?php if(!empty ($section_title) ) : ?>
   <h2 class="section-header"><?php echo esc_html__($section_title,'body-builder'); ?></h2>

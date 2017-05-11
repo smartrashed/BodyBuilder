@@ -2,16 +2,16 @@
 if (!defined('FW')) die('Forbidden');
 
 
-$bd_image = $atts['bg_image'];
-$section_title = $atts['section_title'];
 
+$section_title = $atts['section_title'];
+$extraclass = $atts['extra_body_class'];
 
 
 
 ?>
 
 <!--News start here -->
-<div class="news">
+<div class="news <?php echo esc_attr($extraclass) ?>">
   <div class="container">
     <?php if(!empty($section_title)) : ?>
     <h2 class="section-header"><?php echo  esc_html__( $section_title,'body-builder'); ?></h2>
@@ -25,9 +25,7 @@ $section_title = $atts['section_title'];
               'posts_per_page' => 3
 
             ));
-        ?>
-
-        <?php while($recent_post->have_posts()): $recent_post->the_post()  ?>
+         while($recent_post->have_posts()): $recent_post->the_post()  ?>
 
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="news-item">

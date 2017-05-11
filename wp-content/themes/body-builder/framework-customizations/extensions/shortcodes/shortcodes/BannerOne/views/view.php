@@ -18,10 +18,11 @@ $right_side_link  = $atts['right_side_link'];
 $sub_title = $atts['sub_title'];
 $sub_title_link = $atts['sub_title_link'];
 
+$extraclass = $atts['extra_body_class'];
 
  ?>
 <!--Banner start here -->
-<div class="banner">
+<div class="banner <?php echo esc_attr($extraclass) ?>">
   <div class="container">
     <div class="banner-content">
       	<?php if(!empty($title)) : ?>

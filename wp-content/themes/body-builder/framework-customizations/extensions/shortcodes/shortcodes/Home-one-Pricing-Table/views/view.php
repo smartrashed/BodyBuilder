@@ -2,20 +2,21 @@
 if (!defined('FW')) die('Forbidden');
 
 
-$price_info = new Wp_Query(array(
-    'post_type'=>'price_table',
-    'posts_per_page' => 5 ,
-  ));
-
-
+$extraclass = $atts['extra_body_class'];
 ?>
 
 <!--Pricing start here -->
-<div class="pricing">
+<div class="pricing <?php echo esc_attr($extraclass) ?>">
   <div class="overlay">
     <div class="container">
       <div class="row">
-        <?php while ($price_info->have_posts()): $price_info->the_post() ?>
+        <?php 
+        $price_info = new Wp_Query(array(
+          'post_type'=>'price_table',
+          'posts_per_page' => 5 ,
+        ));
+
+        while ($price_info->have_posts()): $price_info->the_post() ?>
         <div class="col-md-4 col-sm-6 col-xs-12 price_ex_class">
           
           <div class="pricing-item">
