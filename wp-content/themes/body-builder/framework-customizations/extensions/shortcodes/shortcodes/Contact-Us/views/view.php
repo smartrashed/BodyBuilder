@@ -38,10 +38,10 @@ $extraclass = $atts['extra_body_class'];
             </div>
             <div class="content">
               <?php if(!empty($address_title)): ?>
-              <h4><?php echo esc_html__($address_title,'body-builder') ?></h4>
+              <h4><?php echo esc_html($address_title) ?></h4>
               <?php endif; ?>
               <?php if(!empty($address_description)): ?>
-              <p><?php echo esc_html__($address_description,'body-builder') ?></p>
+              <p><?php echo esc_html($address_description) ?></p>
               <?php endif; ?>
             </div>
           </div>
@@ -56,7 +56,7 @@ $extraclass = $atts['extra_body_class'];
               <h4><?php echo esc_html__($contact_title ,'body-builder'); ?></h4>
               <?php endif; ?>
               <?php if(!empty($contact_description)): ?>
-              <p><?php echo esc_html__($contact_description, 'body-builder'); ?></p>
+              <p><?php echo esc_html($contact_description); ?></p>
               <?php endif; ?>
             </div>
           </div>
@@ -68,10 +68,10 @@ $extraclass = $atts['extra_body_class'];
             </div>
             <div class="content">
               <?php if(!empty($email_title)) :  ?>
-              <h4><?php echo esc_html__($email_title,'body-builder'); ?></h4>
+              <h4><?php echo esc_html($email_title); ?></h4>
               <?php endif; ?>
               <?php if(!empty($email_description)) : ?>
-              <p><?php  echo esc_html__($email_description); ?></p>
+              <p><?php  echo esc_html($email_description); ?></p>
               <?php endif; ?>
             </div>
           </div>
@@ -79,7 +79,7 @@ $extraclass = $atts['extra_body_class'];
       </div><!-- contact-info -->
       <div class="contact-form">
         <?php if(!empty($contact_us)): ?>
-        <h3><?php echo esc_html__($contact_us,'body-builder'); ?></h3>
+        <h3><?php echo esc_html($contact_us); ?></h3>
         <?php endif; ?>
 
         <?php echo do_shortcode($contact_form); ?>

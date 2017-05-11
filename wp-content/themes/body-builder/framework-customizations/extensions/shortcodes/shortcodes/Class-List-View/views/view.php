@@ -11,7 +11,7 @@ $extraclass = $atts['extra_body_class'];
 <div class="class-list <?php echo esc_attr($extraclass) ?>">
   <div class="container">
     <?php if(!empty ($section_title) ) : ?>
-  <h2 class="section-header"><?php echo esc_html__($section_title,'body-builder'); ?></h2>
+  <h2 class="section-header"><?php echo esc_html($section_title); ?></h2>
 <?php endif; ?>
     <div class="row">
     <?php $class_info = new Wp_Query(array(
